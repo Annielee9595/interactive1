@@ -1,2 +1,7 @@
-body { color: white; background: pink; }
+body { color: white; background: pink;
+font-family: 'Space Mono', monospace; }
 h1{margin: 20px;}
+#projcets{
+	positon: absolute;
+	right: 500px;
+}
