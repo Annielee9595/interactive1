@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+
+
+	#circle {
+	margin-left: 70px;
+    z-index: -1;
+	position:absolute;
+	width:10px;line-height:10px;
+	border-radius:10px;
+	text-align:center;
+	font-weight:bold;font-size:2.0em;color:white;
+	background-color:white;
+
+	animation-name:rotation;
+	animation-duration:5s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-timing-function:linear;
+}
+
+#circle:hover {
+	animation-play-state:paused;
+}
+
+
+@keyframes rotation {
+	from {
+		left:0;
+		transform:rotate(0deg);
+	}
+	50% {
+		width:300px;line-height:300px;
+		border-radius:150px;
+		background-color:white;
+	}
+	to {
+		left:500px;
+		transform:rotate(360deg);
+	}
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+}
+</style>
+<body>
+
+<div id="circle"><img src="download-2.jpg" alt="Mountain View" width="500" height="377"></div>
+<img src="download-3.jpg" alt="Mountain View">
+
+</body>
+</html>
