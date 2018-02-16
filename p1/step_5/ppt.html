@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Presentation Website Template</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<style type="text/css">
+	body{font-family: 'Roboto', sans-serif;}
+h1{text-align: left;
+  margin-left: 100px;
+font-size: 100px}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto ;
+  grid-gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+</style>
+<body>
+
+	<!-- this is a comment, replace the text between the brackets and dashes to help annotate and organize your code -->
+
+	<!-- a slide is a section -->
+	<div class="slide">
+		<!-- wrap any text in a div with class text -->
+		<div class="text">
+			<h1>Mouse Cursor History</h1>
+			<p>This presentation is on the history of the mouse cursor.</p>
+		</div>
+	</div>
+	<div class="slide">
+		<!-- images automatically center -->
+		<div class="grid-container">
+			<div class="slide">
+  <div class="item1"><img src="menu1.png"></div>
+  <div class="item2"><img src="menu2.png"></div>
+  <div class="item3"><img src="menu3.png"></div>  
+  <div class="item4"><img src="menu4.png"></div>
+  <div class="item5"><img src="menu5.png"></div>
+  <div class="item6"><img src="menu6.png"></div>
+  <div class="item7"><img src="menu7.png"></div></div>
+  <div class="slide">
+  <div class="item8"><img src="menu8.png"></div>  
+  <div class="item9"><img src="menu9.png"></div>
+  <div class="item10"><img src="menu10.png"></div>
+  <div class="item11"><img src="menu11.png"></div>
+  <div class="item12"><img src="menu12.png"></div>
+  <div class="item13"><img src="menu13.png"></div></div>
+  <div class="slide">
+  <div class="item14"><img src="menu14.png"></div>
+  <div class="item15"><img src="menu15.png"></div>
+  <div class="item15"><img src="menu16.png"></div>
+   <div class="item15"><img src="menu17.png"></div>
+   <div class="item15"><img src="menu18.png"></div>
+     <div class="item15"><img src="menu19.png"></div>
+     <div class="item15"><img src="menu20.png"></div>
+	</div>
+	<div class="slide">
+		<div class="text">
+			<a href="https://en.wikipedia.org/wiki/Classic_Mac_OS">Mac OS Classic</a>
+			<br />
+		
+			<p>The design of Mac OS informs much of how we think of mouse cursors today. Their limited resolution, effected their aesthetic representation.</p>
+		</div>
+	</div>
+
+	<!-- javascript for down and up arrows -->
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>	
+	<script type="text/javascript" src="init.js"></script>
+
+</body>
+</html>
