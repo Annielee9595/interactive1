@@ -1,0 +1,56 @@
+html, body {
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.slide {
+	width:100vw;
+	height:100vh;
+	display: flex;
+	overflow: hidden;
+}
+.slide2 {
+	width:100vw;
+	height:400vh;
+	display: flex;
+	
+}
+
+img {
+	align-self: center;
+    justify-content: center;
+    text-align: center;	
+    margin: auto;
+}
+
+
+.text {
+	font-size: 30px;
+	align-self: center;
+    justify-content: center;
+    text-align: center;
+    width:100vw;
+    padding: 100px;	
+    
+}
+
+.text2 {
+	font-size: 20px;
+	align-self: center;
+    justify-content: center;
+    text-align: cneter;
+    width:100vw;
+    padding: 100px;
+    font-family: 'Share Tech Mono', monospace;	
+}
+.text3 {
+	font-size: 20px;
+	align-self: left;
+    justify-content: left;
+    text-align: left;
+    width:100vw;
+    padding: 100px;
+    font-family: 'Share Tech Mono', monospace;	
+}
