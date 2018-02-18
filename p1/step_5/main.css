@@ -11,12 +11,8 @@ html, body {
 	display: flex;
 	overflow: hidden;
 }
-.slide2 {
-	width:100vw;
-	height:400vh;
-	display: flex;
-	
-}
+
+
 
 img {
 	align-self: center;
@@ -46,7 +42,7 @@ img {
     font-family: 'Share Tech Mono', monospace;	
 }
 .text3 {
-	font-size: 20px;
+	font-size: 18px;
 	align-self: left;
     justify-content: left;
     text-align: left;
