@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>Annie</title>
+ 
+  <style>
+@font-face{
+  font-family:"Weibei";
+  src:url("/browserworld/_fonts/WeibeiSC-Bold.otf");
+}
+
+
+html{
+  width:100%;
+  height:100%;
+}
+
+body{
+  width:100%;
+  text-align: center;
+  font-family: 'Weibei','Source Code Pro', sans-serif;
+  background-color: black;
+  overflow:hidden;
+
+}
+
+h1::selected{
+  background-color: black;
+  color:blue;
+}
+
+
+
+button{
+   -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-duration:2s;
+
+    font-family:'Weibei';
+
+
+}
+
+@-webkit-keyframes rotate { 
+0% { -webkit-transform:rotate(0deg) } 
+100% { -webkit-transform:rotate(360deg) } }
+
+
+  </style>
+
+</head>
+
+<body>
+<button>Please click here!</button>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script >
+ $(document).ready(function(){
+            
+            var intervalID;
+
+            var responsePhrases=["img src="09.png]; 
+
+            var requestPhrases=["Please!","Please click!","Click me!","Give it a go!","Click!!","Click!","Click here!","Please click here!","Click this","CLICK","Click this way!"];
+
+            var phraseLength=responsePhrases.length;
+            var requestLength=requestPhrases.length;
+
+            for (i=0;i<=1500;i++){
+                var ranPrompt=Math.floor(Math.random()*requestLength);
+                $('body').append("<button >"+requestPhrases[ranPrompt]+"</button>");
+            }
+
+            $('button').click(function(){
+                var ran=Math.floor(Math.random()*phraseLength);
+                alert(responsePhrases[ran]);
+            })
+
+
+        });  
+
+</script>
+
+</body>
+</html>
