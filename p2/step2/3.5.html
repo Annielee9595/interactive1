@@ -55,11 +55,6 @@ button{
 </head>
 
 <body>
-<div id="overlay" style="position: absolute; z-index: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,.5); display: none;"></div>
-<div id="menu" style="position: fixed; top: calc(50% - 100px); left: calc(50% - 100px); width: 200px; height: 200px; background: transparent; display: none;">
-  <img style="max-height: 100%; max-width: 100%;" id="" src="-3.png" />
-</div>
-
 <button>Please click here!</button>
 
   
@@ -69,7 +64,7 @@ button{
             
             var intervalID;
 
-            var responsePhrases=["-3.png","-4.jpeg","-1.png","-2.png","-5.png","-6.png","-7.png","-8.png","-9.png","-10.png","-11.png","-12.png"]; 
+            var responsePhrases=["Good job!","haha"]; 
 
             var requestPhrases=["Please!","Please click!","Click me!","Give it a go!","Click!!","Click!","Click here!","Please click here!","Click this","CLICK","Click this way!"];
 
@@ -83,14 +78,7 @@ button{
 
             $('button').click(function(){
                 var ran=Math.floor(Math.random()*phraseLength);
-                $('img').attr('src', responsePhrases[ran]);
-                $('#menu').show();
-                $('#overlay').show();                
-            })
-
-            $('#overlay').click(function(){
-              $('#menu').hide();
-              $('#overlay').hide();
+                alert(responsePhrases[ran]);
             })
 
 

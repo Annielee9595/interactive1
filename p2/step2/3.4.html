@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>Annie</title>
+ 
+  <style>
+
+/*  body{
+     background-image: url("google.png");
+      background-size:contain;
+      background-repeat: no-repeat;
+      height:100vh;
+      width:100vw;
+      
+  }*/
+ /* p.solid {border-style: solid;
+    position: absolute;
+    */
+
+.{outline-style: #222;}
+body{background-image: url("http://www.sulki-min.com/wp/sm-images/bg-noise.gif");}
+  /*  .menu{
+      height:80vh;
+      width:80vw;
+      margin-top: 20px;
+      margin-left: 20px;
+      position:absolute;
+      margin-left: 1000px;
+
+*/
+    }
+     .menu2{
+      height:63vh;
+      width:22vw;
+      margin-top: 100px;
+      margin-left: 400px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+      .menu3{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 100px;
+      margin-left: 400px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+      .menu4{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 120px;
+      margin-left: 900px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+     .menu5{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 350px;
+      margin-left: 600px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+
+       .menu6{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 150px;
+      margin-left: 550px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+
+       .menu7{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 70px;
+      margin-left: 200px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+
+       .menu8{
+  
+      height:63vh;
+      width:22vw; 
+      margin-top: 380px;
+      margin-left: 400px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+
+     .menu9{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 340px;
+      margin-left: 700px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+
+     .menu10{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 80px;
+      margin-left: 50px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+
+
+     .menu11{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 500px;
+      margin-left: 800px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+
+      
+
+      .menu12{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 30px;
+      margin-left: 150px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+    .menu13{
+  
+      height:63vh;
+      width:22vw;
+      margin-top: 50px;
+      margin-left: 400px;
+      position:absolute;
+      box-shadow:  0px 0px 20px #222;
+    }
+
+
+
+
+    .hidden{
+      display:none;
+    }
+
+    .rand {
+  font-family: Helvetica, sans-serif;
+  word-wrap: break;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+}
+
+
+
+   /* img{
+      height: 20px;
+      width: 20px;
+      margin-left: 1000px
+    }*/
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="menu">
+  <img src="unnamed.png" class="btn1">
+  </div>
+
+   <div class="menu2 hidden rand" id="rand_pos1" >
+   <img src="01.png" class="btn2">
+  </div>
+
+
+
+<div class="menu3 hidden rand" id="rand_pos2">
+    <img src="02.png" class="btn3">
+    
+  </div> 
+
+  <div class="menu4 hidden rand" id="rand_pos3" >
+    <img src="03.png" class="btn4">
+  </div> 
+
+  <div class="menu5 hidden">
+    <img src="04.png" class="btn5">
+  </div> 
+
+  <div class="menu6 hidden">
+    <img src="=====.png" class="btn6">
+  </div> 
+
+<div class="menu7 hidden">
+    <img src="05.png" class="btn7">
+  </div> 
+
+  <div class="menu8 hidden">
+    <img src="06.png" class="btn8">
+  </div> 
+  <div class="menu9 hidden">
+    <img src="07.png" class="btn9">
+  </div> 
+
+  <div class="menu10 hidden">
+    <img src="08.png" class="btn10">
+  </div> 
+
+  <div class="menu11 hidden">
+    <img src="09.png" class="btn11">
+  </div> 
+
+  <div class="menu12 hidden">
+    <img src="010.png" class="btn12">
+  </div> 
+
+  <div class="menu13 hidden">
+    <img src="011.png" class="btn13">
+  </div> 
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+  $(document).ready(function(){
+
+    $(".btn1").click(function(){
+       $(".menu2").removeClass("hidden"); 
+        var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos1').css('left', randPosX);
+  $('#rand_pos1').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+       // $(".menu").addClass("hidden");
+    }); 
+
+      $(".btn2").click(function(){
+       $(".menu3").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos2').css('left', randPosX);
+  $('#rand_pos2').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+
+      $(".btn3").click(function(){
+       $(".menu4").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos3').css('left', randPosX);
+  $('#rand_pos3').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+
+       $(".btn4").click(function(){
+       $(".menu5").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+
+       $(".btn5").click(function(){
+       $(".menu6").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+       $(".btn6").click(function(){
+       $(".menu7").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+       $(".btn7").click(function(){
+       $(".menu8").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+       $(".btn8").click(function(){
+       $(".menu9").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+       $(".btn9").click(function(){
+       $(".menu10").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+       $(".btn10").click(function(){
+       $(".menu11").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+       $(".btn11").click(function(){
+       $(".menu12").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+       $(".btn12").click(function(){
+       $(".menu13").removeClass("hidden");var bodyWidth = document.body.clientWidth
+        var bodyHeight = document.body.clientHeight;
+        var randPosX = Math.floor((Math.random()*bodyWidth-500));
+        var randPosY = Math.floor((Math.random()*bodyHeight-1000));
+        var posLog = document.getElementById('pos_log');
+        var posXY = 'x: ' + randPosX + '<br />' + 'y: ' + randPosY;
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+    });
+
+
+
+  });
+
+</script>
+
+</body>
+</html>
