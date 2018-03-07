@@ -20,6 +20,8 @@ a{
   margin-left: 3px;
 }
 
+
+
 .heading{
   text-align: center;
   margin: 1em auto;
@@ -33,10 +35,33 @@ a{
   padding: 0 15px;
 }
 
+/*div{
+    border: 2px solid red;
+}*/
+
+#grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  justify-content: center;
+
+}
+
 .col-1-4{
   width: 25%;
+  /*float: left;*/
+ /* padding: 20px 0;*/
+}
+
+#sq1{
+  margin-left: 170px;
   float: left;
-  padding: 20px 0;
+
+}
+
+#sq2{
+  margin-right: 50px;
+  float: left;
 }
 
 .img-container{
@@ -46,6 +71,8 @@ a{
   overflow: hidden;
   border-radius: 5px;
 }
+
+
 
 .img-caption{
   -webkit-box-sizing: border-box;
@@ -131,8 +158,9 @@ a{
 <h1 class="heading">Menu Icon</h1>
 
   <!-- this is the containing grid-->
-  <div class="col-1-4">
-    <div class="img-container">
+  <div id="grid">
+  <div id="sq1" class="col-1-4">
+    <div id="sq1" class="img-container">
       <img src="++.png" alt="img">
       <div class="img-caption right">
         <a href="https://annielee9595.github.io/interactive1/p2/step2/0.html"><h3>Menu Icon</h3></a>
@@ -142,8 +170,8 @@ a{
 
   <body>
   <!-- this is the containing grid-->
-  <div class="col-1-4">
-    <div class="img-container">
+  <div id="sq2" class="col-1-4">
+    <div id="sq2" class="img-container">
       <img src="++1.png" alt="img">
       <div class="img-caption right">
         <a href="https://annielee9595.github.io/interactive1/p2/step2/===.html"><h3>Menu Icon</h3></a>
@@ -153,8 +181,8 @@ a{
 
   <body>
   <!-- this is the containing grid-->
-  <div class="col-1-4">
-    <div class="img-container">
+  <div id="sq1" class="col-1-4">
+    <div id="sq1" class="img-container">
       <img src="++2.png" alt="img">
       <div class="img-caption right">
         <a href="https://annielee9595.github.io/interactive1/p2/step2/02.html"><h3>Menu Icon</h3></a>
@@ -163,13 +191,14 @@ a{
   </div>
   <body>
   <!-- this is the containing grid-->
-  <div class="col-1-4">
-    <div class="img-container">
+  <div id="sq2" class="col-1-4">
+    <div id="sq2" class="img-container">
       <img src="++3.png" alt="img">
       <div class="img-caption right">
         <a href="https://annielee9595.github.io/interactive1/p2/step2/03.html"><h3>Menu Icon</h3></a>
       </div>
      </div>
+  </div>
   </div>
   
 </body>
