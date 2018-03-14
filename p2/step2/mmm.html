@@ -228,7 +228,7 @@ body{background-image: url("bg-noise2.gif")}
 h2{ /*margin-top:20px;*/
   color: 888;
   font-family: 'Space Mono', monospace;
-  position: absolute;
+  /*position: absolute;*/
   /*transform: rotate(45deg);  */
 }
 </style>
@@ -236,7 +236,7 @@ h2{ /*margin-top:20px;*/
 </head>
 
 <body>
-  
+ 
   <div class="menu1">
     <!-- <h2>Click left top</h2> --><img src="unnamed.png" class="btn"><h2>Click the menu icon</h2>
   </div>
@@ -248,7 +248,7 @@ h2{ /*margin-top:20px;*/
 
 
 <div class="menu3 hidden">
-    <img src="`2.png" class="btn"><h2>Click the menu icon</h2>
+    <img src="`2.png" class="btn"><h2>Click the menu icon</h2> 
  
   </div> 
 
@@ -324,21 +324,21 @@ h2{ /*margin-top:20px;*/
     });
 
     // store the height and width of the window as variables
-    var winHeight = $(window).height();
-    var winWidth = $(window).width();
+    // var winHeight = $(window).height();
+    // var winWidth = $(window).width();
       
-      // loop over each image on the page
-      $('h2').each(function() {
+    //   // loop over each image on the page
+    //   $('h2').each(function() {
 
-        // get a random x and y position
-        var randPosX = Math.floor((Math.random()*winWidth));
-        var randPosY = Math.floor((Math.random()*winHeight));
+    //     // get a random x and y position
+    //     var randPosX = Math.floor((Math.random()*winWidth));
+    //     var randPosY = Math.floor((Math.random()*winHeight));
       
-        // apply the random position
-        // $(this).css('left', (randPosX)+'px');
-        $(this).css('top', (randPosY)+'-2px');
-        $(this).css('transform', 'rotate('+(randPosY)+'deg)');
-      });
+    //     // apply the random position
+    //     $(this).css('left', (randPosX)+'px');
+    //     $(this).css('top', (randPosY)+'px');
+    //     $(this).css('transform', 'rotate('+(randPosY)+'deg)');
+    //   });
 
 
     //   $(".btn2").click(function(){
