@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>Annie</title>
+ 
+  <style>
+  body{background-image: url("bg-noise2.gif");
+  }}
+@font-face{
+  font-family:"Weibei";
+  src:url("/browserworld/_fonts/WeibeiSC-Bold.otf");
+}
+
+
+html{
+  width:100%;
+  height:100%;
+}
+
+body{
+  width:100%;
+  text-align: center;
+  font-family: 'Weibei','Source Code Pro', sans-serif;
+  background-color: black;
+  overflow:hidden;
+
+}
+
+h1::selected{
+  background-color: black;
+  color:blue;
+
+}
+
+
+
+button{
+   -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-duration:2s;
+
+    font-family:'Weibei';
+    height:50px;
+    width: 90px;
+
+
+}
+
+@-webkit-keyframes rotate { 
+0% { -webkit-transform:rotate(0deg) } 
+100% { -webkit-transform:rotate(360deg) } }
+
+
+  </style>
+
+</head>
+
+<body>
+<div id="overlay" style="position: absolute; z-index: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,.5); display: none;"></div>
+<div id="menu" style="position: fixed; top: calc(50% - 100px); left: calc(50% - 100px); width: 200px; height: 200px; background: transparent; display: none;">
+  <img style="max-height: 100%; max-width: 100%;" id="" src="-3.png" />
+</div>
+
+<button>Please click here!</button>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script >
+ $(document).ready(function(){
+            
+            var intervalID;
+
+            var responsePhrases=["-3.png","-4.png","-1.png","-2.png","-5.png","-6.png","-7.png","-8.png","-9.png","-10.png","-11.png","-12.png","-13.png","-14.png","-15.png","-16.png","-17.png","-18.png","-19.png","-20.png","-21.png","-22.png","-23.png","-24.png","-25.png","-26.png","-27.png","-28.png","-29.png","-30.png","-31.png"]; 
+
+            var requestPhrases=["Please!","Please click!","Click me!","Give it a go!","Click!!","Click!","Click here!","Please click here!","Click this","CLICK","Click this way!"];
+
+            var phraseLength=responsePhrases.length;
+            var requestLength=requestPhrases.length;
+
+            for (i=0;i<=1500;i++){
+                var ranPrompt=Math.floor(Math.random()*requestLength);
+                $('body').append("<button >"+requestPhrases[ranPrompt]+"</button>");
+            }
+
+            $('button').click(function(){
+                var ran=Math.floor(Math.random()*phraseLength);
+                $('img').attr('src', responsePhrases[ran]);
+                $('#menu').show();
+                $('#overlay').show();                
+            })
+
+            $('#overlay').click(function(){
+              $('#menu').hide();
+              $('#overlay').hide();
+            })
+
+
+        });  
+
+</script>
+
+</body>
+</html>
