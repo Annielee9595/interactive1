@@ -61,3 +61,12 @@ body {
 		opacity: 0;
 	}
 }
+h1:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+h3:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
