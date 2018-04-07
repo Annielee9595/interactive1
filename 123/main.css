@@ -15,7 +15,7 @@ body {
 }
 
 /* iPad */
-@media (min-width: 668px) and (max-width: 1024px) { 
+/*@media (min-width: 668px) and (max-width: 1024px) { 
 	body {
 		background: grey;
 	}
@@ -28,7 +28,7 @@ body {
 		display: none;
 	}
 
-}
+}*/
 
 /* iPhone 6 */
 @media (min-width: 375px) and (max-width: 667px) { 
@@ -53,8 +53,8 @@ body {
 }
 
 .wrap {
-  width: 425px;
-  margin: 50px auto;
+  width: 300px;
+  margin: 70px auto;
 }
 .wrap ul {
   margin: 0;
@@ -63,7 +63,7 @@ body {
 }
 .wrap ul li {
   display: inline-block;
-  margin: 1%;
+  margin: 6%;
 }
 .wrap ul li:last-child {
   margin-right: 0;
