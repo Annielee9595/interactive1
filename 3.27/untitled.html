@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media Queries</title>
+	<!-- Set the Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS -->
+	<style>
+  * { margin: 0px; padding: 0px; }
+
+body {
+  background: #bdbdbd;;
+  margin: 50px;
+}
+
+#desktop{
+  display: block;
+  color: white;
+}
+
+#tablet, #mobile, #print {
+  display: none;
+}
+
+/* iPad */
+@media (min-width: 668px) and (max-width: 1024px) { 
+  body {
+    background: grey;
+  }
+
+  #tablet{
+    display: block;
+  }
+
+  #desktop, #mobile, #print {
+    display: none;
+  }
+
+}
+
+/* iPhone 6 */
+@media (min-width: 375px) and (max-width: 667px) { 
+  
+  body {
+    background: white;
+    
+  }
+
+  #mobile{
+    display: block;
+  }
+
+  #desktop, #tablet, #print {
+    display: none;
+  }
+}
+
+/* print */
+@media print {
+  
+  body {
+    background: white;
+  }
+
+  #print{
+    display: block;
+  }
+
+  #desktop, #tablet, #mobile {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+}
+div {
+  margin: 20px 0 0 0;
+}
+.marquee {
+  -webkit-animation: caption 50s linear 0s infinite;
+  font-family: "Segoe ui";
+  padding: 20px 0;
+  border: 1px solid #000;
+  background-color: #;
+  -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5),
+    0px 1px 0px rgba(250, 250, 250, 0.2);
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5),
+    0px 1px 0px rgba(250, 250, 250, 0.2);
+  -webkit-transition: background-color 350ms;
+  -moz-transition: background-color 350ms;
+  transition: background-color 350ms;
+  overflow: hidden;
+  overflow-x: -webkit-marquee;
+  -webkit-marquee-direction: right;
+  -webkit-marquee-style: scroll;
+  -webkit-marquee-speed: normal;
+  -webkit-marquee-increment: small;
+  -webkit-marquee-repetition: 5;
+  overflow-x: marquee-line;
+  marquee-direction: forward;
+  marquee-style: loop;
+  marquee-speed: slow;
+  marquee-play-count: 5;
+  color: #28282a;
+  background: #ffeb95;
+}
+
+  </style>
+
+</head>
+<body>
+
+
+
+
+<div class="marquee">
+  <marquee direction="right" speed="normal" behavior="loop" >
+     Ovde ide neka vest sto se prikazuje traka sa vestima koja ce non stop da se krece :D 
+  </marquee>
+  
+  <marquee behavior="scroll" direction="right" scrollamount="1">Slow scroll speed</marquee>
+  <marquee behavior="scroll" direction="right" scrollamount="6">srednje scroll speed</marquee>
+  <marquee behavior="alternate" direction="right" scrollamount="6">alternate scroll speed</marquee>
+  <marquee behavior="slide" direction="right" scrollamount="6">slide scroll speed</marquee>
+<marquee behavior="scroll" direction="right" scrollamount="10">Medium scroll speed</marquee>
+<marquee behavior="scroll" direction="right" scrollamount="20">Fast scroll speed</marquee>
+</div>  
+
+
+
+
+
+    <div id="print">
+      This is print
+      <img src="23.jpg">
+    </div>
+
+	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+
+</script>
+</body>
+</html>
