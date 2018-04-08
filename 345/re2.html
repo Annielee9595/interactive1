@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media Queries</title>
+	<!-- Set the Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS -->
+	<style>
+  body { margin-top: 0px;
+ /*  margin-top: 50px;*/
+ }
+
+ 
+.list li {
+  margin-left: 10px;
+  background: url(images/icon_arrow_right.png) no-repeat 97% 50%;
+  border-bottom: 1px solid #ccc;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+.li-img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 20%;
+  padding-right: 1em;
+
+}
+.li-img img {
+ /* display: block;*/
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:  5px;
+
+}
+.li-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+  padding-right: 1em;
+  
+}
+.li-head {
+  margin: 20px;
+}
+.li-summary {
+  display: none;
+  margin: 0;
+}
+.li-action {
+  margin: 20px;
+}
+
+@media screen and (min-width: 40em) {
+  .list li {
+    background: none;
+  }
+  .li-summary {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .list li {
+    float: left;
+    width: 50%;
+  }
+  .inner {
+    padding-right: 1em;
+  }
+}
+
+
+
+
+
+
+
+.demo-center {
+  left: 50%;
+  max-width: 80%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+aside {
+  background-color: #111213;
+  bottom: 0;
+  color: #fafafa;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 300ms ease-out;
+  transform: translate3d(-100%, 0, 0);
+  width: 80%;
+  z-index: 0;
+}
+aside a {
+  background-color: #111213;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #fafafa;
+  display: block;
+  font-weight: 300;
+  padding: .8em 1em;
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+aside a:hover {
+  background-color: #1f2223;
+}
+aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*.app {
+  background-color: #cfd2d3;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  height: 480px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 320px;
+}*/
+.app:after {
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.3);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+header {
+  background-color: #ee4630;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  margin-left: -20px;
+}
+header h1 {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+header .menu-btn {
+  display: block;
+  left: 1em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 500ms ease-in-out;
+  width: 24px;
+}
+header .menu-btn:after, header .menu-btn:before {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 4px;
+  transition: all 200ms ease-in-out;
+}
+header .menu-btn:before {
+  box-shadow: 0 10px 0 #fff;
+  margin-bottom: 16px;
+}
+header .menu-btn.active:before {
+  box-shadow: 0 0 0 #fff;
+  transform: translateY(10px) rotate(45deg);
+}
+header .menu-btn.active:after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+img {
+  vertical-align: middle;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 300ms ease-out;
+  z-index: 1;
+
+}
+
+section {
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: -1;
+
+}
+section.active {
+  margin-top: 0px;
+  opacity: 1;
+  z-index: 1;
+}
+section .item {
+
+  background-color: #fff;
+  display: table;
+  margin-bottom: 1px;
+}
+section .item .img-wrapper,
+section .item .item-content {
+  display: table-cell;
+  vertical-align: top;
+}
+section .item .img-wrapper {
+  width: 200px;
+
+}
+section .item .item-content {
+  font-size: .9em;
+  padding: .5em;
+}
+section .item .item-content h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar aside {
+  transform: translate3d(0, 0, 0);
+  z-index: 3;
+}
+.sidebar .main {
+  transform: translate3d(80%, 0, 0);
+}
+a{  /*font-size: 20px;*/
+  color: black;
+  text-decoration: none;
+}
+
+
+
+  </style>
+
+</head>
+<body>
+	<!-- show by default -->
+	<div id="desktop">
+		<!DOCTYPE html>
+<html>
+<head>
+	<title>Media Queries</title>
+	<!-- Set the Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS -->
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+	<!-- show by default -->
+	<div id="desktop">
+	
+	</div>
+
+
+	</div>
+
+	<!-- show on tablet -->
+<!-- 	<div id="tablet">
+		This is for the tablet.
+	</div> -->
+
+	<!-- show on mobile -->
+	<div class="app">
+    <aside>
+    
+      <ul>
+        <li><a href="https://annielee9595.github.io/interactive1/345/app.html">Home</a></li>
+
+        <li><a href="https://annielee9595.github.io/interactive1/345/app.html
+">Services</a></li>
+        <li><a href="https://annielee9595.github.io/interactive1/345/app.html
+">Contact</a></li>
+      </ul>
+   
+  </aside>
+  <!--Pattern HTML-->
+
+  <div id="pattern" class="pattern">
+    
+
+      
+    <header>
+      <a href="#sidebar" class="menu-btn"></a>
+      <h1>Home</h1>
+    </header>
+
+    <section  class="active">
+<ul class="list img-list">
+      <li>
+        <a href="https://annielee9595.github.io/interactive1/345/app.html
+" class="inner">
+          <div class="li-img">
+            <img src="00.png" alt="Image Alt Text" />
+          </div>
+          <div class="li-text">
+            <h4 class="li-head">Title of Content</h4>
+           <!--  <p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p> -->
+            <p class="li-action">Read More</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://annielee9595.github.io/interactive1/345/app.html" class="inner">
+          <div class="li-img">
+            <img src="000.png" alt="Image Alt Text" />
+          </div>
+          <div class="li-text">
+            <h4 class="li-head">Title of Content</h4>
+            <!-- <p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p> -->
+            <p class="li-action">Learn More</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="inner">
+          <div class="li-img">
+            <img src="https://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
+          </div>
+          <div class="li-text">
+            <h4 class="li-head">Title of Content</h4>
+           <!--  <p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p> -->
+            <p class="li-action">Read More</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="inner">
+          <div class="li-img">
+            <img src="https://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
+          </div>
+          <div class="li-text">
+            <h4 class="li-head">Title of Content</h4>
+           <!--  <p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p> -->
+            <p class="li-action">Learn More</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="inner">
+          <div class="li-img">
+            <img src="https://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
+          </div>
+          <div class="li-text">
+            <h4 class="li-head">Title of Content</h4>
+            <!-- <p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p> -->
+            <p class="li-action">Read More</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="inner">
+          <div class="li-img">
+            <img src="https://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
+          </div>
+          <div class="li-text">
+            <h4 class="li-head">Title of Content</h4>
+           <!--  <p class="li-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet tellus velit, ut semper neque.</p> -->
+            <p class="li-action">Read More</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+  <!--End Pattern HTML-->
+
+  
+
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+(function(){
+  var app = {
+    cache: function() {
+      this.$app     = document.querySelector('.app');
+      this.$menuBtn = document.querySelector('.menu-btn');
+      this.$sidebar = document.querySelector('aside');
+      this.$nav     = this.$sidebar.querySelector('nav');
+      this.$title   = document.querySelector('h1');
+    },
+    events: function() {
+      this.$menuBtn.addEventListener('click', this.menuClicked.bind(this));
+      this.$nav.addEventListener('click', this.navClicked.bind(this));
+    },
+    init: function() {
+      this.cache();
+      this.events();
+    },
+    menuClicked: function(e) {
+      e.preventDefault();
+      if(!this.$app.classList.contains('sidebar')) {
+        this.$app.classList.add('sidebar');
+        this.$menuBtn.classList.add('active');
+      } else {
+        this.$app.classList.remove('sidebar');
+        this.$menuBtn.classList.remove('active');
+      }
+    },
+    navClicked: function(e) {
+      var link, sectionId, section, activeSection;
+      e.preventDefault();
+      
+      if(!e.target.hasAttribute('href')) return;
+      link = e.target;
+      sectionId = link.getAttribute('href');
+      section = this.$app.querySelector(sectionId);
+      activeSection = this.$app.querySelector('section.active');
+      
+      activeSection.classList.remove('active');
+      section.classList.add('active');
+      this.$menuBtn.click();
+      this.$title.innerHTML = link.innerHTML;
+    }
+  };
+  
+  app.init();
+})();
+
+</script>
+</body>
+</html>
