@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media Queries</title>
+	<!-- Set the Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS -->
+	<style>
+  body { margin-top: 0px;
+ /*  margin-top: 50px;*/
+ }
+
+ 
+.list li {
+  margin-left: 10px;
+  background: url(images/icon_arrow_right.png) no-repeat 97% 50%;
+  border-bottom: 1px solid #ccc;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+.li-img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 20%;
+  padding-right: 1em;
+
+}
+.li-img img {
+ /* display: block;*/
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:  5px;
+
+}
+.li-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+  padding-right: 1em;
+  
+}
+.li-head {
+  margin: 20px;
+}
+.li-summary {
+  display: none;
+  margin: 0;
+}
+.li-action {
+  margin: 20px;
+}
+
+@media screen and (min-width: 40em) {
+  .list li {
+    background: none;
+  }
+  .li-summary {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .list li {
+    float: left;
+    width: 50%;
+  }
+  .inner {
+    padding-right: 1em;
+  }
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+  #BD_Con_004 {
+      padding-top: 5em;
+      padding-bottom: 5em;
+      width: 100%;
+      height: 100%;
+      display: table;
+      background-image: url(http://i2636834.html.31.preview1-live.billiondigital.com/themes/Untitled/assets/images/176a2acbebab113fe3e8626e9df78536_45min.jpg);
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: center center;
+      background-color: #ececec;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+  }
+  #BD_Con_004:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #080808;
+      opacity: 0.75;
+  }
+  .ver_mdl{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+  }
+  .W_B_title {
+      line-height: 102.85714289px;
+      color: #ffffff;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 72px;
+  }
+  .W_B_title {
+      word-wrap: break-word;
+      margin-bottom: 0px;
+  }
+  .W_B_sub {
+      line-height: 85.71428574px;
+      text-transform: none;
+      letter-spacing: -1px;
+      font-weight: 300;
+      color: #ffffff;
+      font-size: 60px;
+      margin-bottom: 0.1em;
+  }
+  .W_B_sub {
+      word-wrap: break-word;
+      margin-top: 0px;
+  }
+  .bd-linkbutton {
+      border-width: 0;
+      padding: 0;
+      color: #ffffff;
+      vertical-align: middle;
+      display: inline-block;
+      text-align: center;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: all 400ms ease-in-out;
+      padding: 9px 22px;
+      border: 1px solid #ffffff;
+      line-height: 17.14285715px;
+      background-color: transparent;
+      margin-top: 20px;
+  }
+  .bd-linkbutton:hover{
+    background-color: #fff;
+    color: #111;
+    text-decoration: none;
+  }
+  @media all and (max-width: 767px){
+    .W_B_sub{
+      font-size: 40px;
+      line-height:40px;
+    }
+    .W_B_title{
+      font-size: 50px;
+    }
+  }
+
+
+
+
+  </style>
+
+</head>
+<body>
+	<!-- show by default -->
+	<div id="desktop">
+		<!DOCTYPE html>
+<html>
+<head>
+	<title>Media Queries</title>
+	<!-- Set the Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS -->
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+	<!-- show by default -->
+	<div id="desktop">
+	
+	</div>
+
+
+	</div>
+
+	<!-- show on tablet -->
+<!-- 	<div id="tablet">
+		This is for the tablet.
+	</div> -->
+
+	<!-- show on mobile -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+  <!-- Set the Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <style>
+  body { margin-top: 0px;
+ /*  margin-top: 50px;*/
+ }
+
+ 
+.list li {
+  margin-left: 10px;
+  background: url(images/icon_arrow_right.png) no-repeat 97% 50%;
+  border-bottom: 1px solid #ccc;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+.li-img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 20%;
+  padding-right: 1em;
+
+}
+.li-img img {
+ /* display: block;*/
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:  5px;
+
+}
+.li-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+  padding-right: 1em;
+  
+}
+.li-head {
+  margin: 20px;
+}
+.li-summary {
+  display: none;
+  margin: 0;
+}
+.li-action {
+  margin: 20px;
+}
+
+@media screen and (min-width: 40em) {
+  .list li {
+    background: none;
+  }
+  .li-summary {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .list li {
+    float: left;
+    width: 50%;
+  }
+  .inner {
+    padding-right: 1em;
+  }
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+* {
+  text-decoration: none;
+}
+
+.food-explain {
+  display: none;
+  padding: 20px;
+}
+
+.food-explain .food-title {
+  text-align: center;
+}
+
+.thumb-nails {
+  background-color: wheat;
+  display: inline-block;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.thumb-nails:hover .food-explain {
+  display: block;
+  background-color: white;
+  opacity: 0.5;
+    /*background-color: transparent;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+  </style>
+
+</head>
+<body>
+  <!-- show by default -->
+  <div id="desktop">
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+  <!-- Set the Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <!-- show by default -->
+  <div id="desktop">
+  
+  </div>
+
+
+  </div>
+
+  <!-- show on tablet -->
+<!--  <div id="tablet">
+    This is for the tablet.
+  </div> -->
+
+  <!-- show on mobile -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+  <!-- Set the Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <style>
+  body { margin-top: 0px;
+ /*  margin-top: 50px;*/
+ }
+
+ 
+.list li {
+  margin-left: 10px;
+  background: url(images/icon_arrow_right.png) no-repeat 97% 50%;
+  border-bottom: 1px solid #ccc;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+.li-img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 20%;
+  padding-right: 1em;
+
+}
+.li-img img {
+ /* display: block;*/
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:  5px;
+
+}
+.li-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+  padding-right: 1em;
+  
+}
+.li-head {
+  margin: 20px;
+}
+.li-summary {
+  display: none;
+  margin: 0;
+}
+.li-action {
+  margin: 20px;
+}
+
+@media screen and (min-width: 40em) {
+  .list li {
+    background: none;
+  }
+  .li-summary {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .list li {
+    float: left;
+    width: 50%;
+  }
+  .inner {
+    padding-right: 1em;
+  }
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+  #BD_Con_004 {
+      padding-top: 5em;
+      padding-bottom: 5em;
+      width: 100%;
+      height: 100%;
+      display: table;
+      background-image: url(http://i2636834.html.31.preview1-live.billiondigital.com/themes/Untitled/assets/images/176a2acbebab113fe3e8626e9df78536_45min.jpg);
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: center center;
+      background-color: #ececec;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+  }
+  #BD_Con_004:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #080808;
+      opacity: 0.75;
+  }
+  .ver_mdl{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+  }
+  .W_B_title {
+      line-height: 102.85714289px;
+      color: #ffffff;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 72px;
+  }
+  .W_B_title {
+      word-wrap: break-word;
+      margin-bottom: 0px;
+  }
+  .W_B_sub {
+      line-height: 85.71428574px;
+      text-transform: none;
+      letter-spacing: -1px;
+      font-weight: 300;
+      color: #ffffff;
+      font-size: 60px;
+      margin-bottom: 0.1em;
+  }
+  .W_B_sub {
+      word-wrap: break-word;
+      margin-top: 0px;
+  }
+  .bd-linkbutton {
+      border-width: 0;
+      padding: 0;
+      color: #ffffff;
+      vertical-align: middle;
+      display: inline-block;
+      text-align: center;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: all 400ms ease-in-out;
+      padding: 9px 22px;
+      border: 1px solid #ffffff;
+      line-height: 17.14285715px;
+      background-color: transparent;
+      margin-top: 20px;
+  }
+  .bd-linkbutton:hover{
+    background-color: #fff;
+    color: #111;
+    text-decoration: none;
+  }
+  @media all and (max-width: 767px){
+    .W_B_sub{
+      font-size: 40px;
+      line-height:40px;
+    }
+    .W_B_title{
+      font-size: 50px;
+    }
+  }
+
+
+
+
+  </style>
+
+</head>
+<body>
+  <!-- show by default -->
+  <div id="desktop">
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+  <!-- Set the Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <!-- show by default -->
+  <div id="desktop">
+  
+  </div>
+
+
+  </div>
+
+  <!-- show on tablet -->
+<!--  <div id="tablet">
+    This is for the tablet.
+  </div> -->
+
+  <!-- show on mobile -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+  <!-- Set the Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <style>
+  body { margin-top: 0px;
+ /*  margin-top: 50px;*/
+ }
+
+ 
+.list li {
+  margin-left: 10px;
+  background: url(images/icon_arrow_right.png) no-repeat 97% 50%;
+  border-bottom: 1px solid #ccc;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+.li-img {
+  display: table-cell;
+  vertical-align: middle;
+  width: 20%;
+  padding-right: 1em;
+
+}
+.li-img img {
+ /* display: block;*/
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:  5px;
+
+}
+.li-text {
+  display: table-cell;
+  vertical-align: middle;
+  width: 70%;
+  padding-right: 1em;
+  
+}
+.li-head {
+  margin: 20px;
+}
+.li-summary {
+  display: none;
+  margin: 0;
+}
+.li-action {
+  margin: 20px;
+}
+
+@media screen and (min-width: 40em) {
+  .list li {
+    background: none;
+  }
+  .li-summary {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .list li {
+    float: left;
+    width: 50%;
+  }
+  .inner {
+    padding-right: 1em;
+  }
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Open Sans;
+ /* background: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1920&h=1280&q=80);*/
+  height: 100%;
+  margin: 10px;
+}
+
+main {
+  background: #fff;
+  min-height: 100%;
+  width: 90%;
+  margin: 20px auto;
+  box-sizing: border-box;
+  padding: 10px 20px;
+ 
+}
+main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+main h1 {
+  margin-left: 10px;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.food {
+  height: 200px;
+  width: 300px;
+  position: relative;
+  float: left;
+  margin: 10px;
+}
+.food h2.name {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  font-size: 30px;
+}
+.food h2.price {
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  bottom: 7px;
+  right: 20px;
+  font-size: 24px;
+}
+
+.one {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent), url(https://images.unsplash.com/photo-1428660386617-8d277e7deaf2?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1920&h=1440&q=80);
+  background-size: cover;
+  background-position: right center;
+   /*box-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);*/
+}
+
+.two {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent), url(https://images.unsplash.com/photo-1440637475816-2e8bf1d4b6f3?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1920&h=1280&q=80);
+  background-size: cover;
+  background-position: right center;
+}
+
+.three {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent), url(https://images.unsplash.com/photo-1453831362806-3d5577f014a4?format=auto&auto=compress&dpr=1&crop=entropy&fit=crop&w=1920&h=1301&q=80);
+  background-size: cover;
+  background-position: right center;
+}
+
+
+
+
+  </style>
+
+</head>
+<body>
+  <!-- show by default -->
+  <div id="desktop">
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+  <!-- Set the Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <!-- show by default -->
+  <div id="desktop">
+  
+  </div>
+
+
+  </div>
+
+  <!-- show on tablet -->
+<!--  <div id="tablet">
+    This is for the tablet.
+  </div> -->
+
+  <!-- show on mobile -->
+<main>
+  <h1>Menu</h1>
+
+   <div class="food one">
+    <h2 class="name">Hamburger</h2>
+     <h2 class="price">7.95$</h2>
+    </div>
+   <div class="food two">
+    <h2 class="name">Salami Pizza</h2>
+     <h2 class="price">12.35$</h2>
+    </div>
+   <div class="food three">
+    <h2 class="name">Risotto</h2>
+     <h2 class="price">15.00$</h2>
+    </div>
+   <div class="food two">
+    <h2 class="name">Salami Pizza</h2>
+     <h2 class="price">12.35$</h2>
+    </div>
+ <div class="food three">
+    <h2 class="name">Risotto</h2>
+     <h2 class="price">15.00$</h2>
+    </div>
+<div class="food one">
+    <h2 class="name">Hamburger</h2>
+     <h2 class="price">7.95$</h2>
+    </div>
+  
+  <div class="food one">
+    <h2 class="name">Hamburger</h2>
+     <h2 class="price">7.95$</h2>
+    </div>
+   <div class="food two">
+    <h2 class="name">Salami Pizza</h2>
+     <h2 class="price">12.35$</h2>
+    </div>
+   <div class="food three">
+    <h2 class="name">Risotto</h2>
+     <h2 class="price">15.00$</h2>
+    </div>
+</main>
+
+  <!-- show on print -->
+  <div id="print">
+
+  </div>  
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>
+  <!-- show on print -->
+  <div id="print">
+
+  </div>  
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+</script>
+</body>
+</html>
