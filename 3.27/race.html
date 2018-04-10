@@ -1,122 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Media Queries</title>
-	<!-- Set the Viewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- CSS -->
-	<style>
-  * { margin: 0px; padding: 0px; }
 
-body {
-  background: #bdbdbd;;
-  margin: 50px;
-}
-
-#desktop{
-  display: block;
-  color: white;
-}
-
-#tablet, #mobile, #print {
-  display: none;
-}
-
-/* iPad */
-@media (min-width: 668px) and (max-width: 1024px) { 
-  body {
-    background: grey;
-  }
-
-  #tablet{
-    display: block;
-  }
-
-  #desktop, #mobile, #print {
-    display: none;
-  }
-
-}
-
-/* iPhone 6 */
-@media (min-width: 375px) and (max-width: 667px) { 
-  
-  body {
-    background: white;
-    
-  }
-
-  #mobile{
-    display: block;
-  }
-
-  #desktop, #tablet, #print {
-    display: none;
-  }
-}
-
-/* print */
-@media print {
-  
-  body {
-    background: white;
-  }
-
-  #print{
-    display: block;
-  }
-
-  #desktop, #tablet, #mobile {
-    opacity: 0;
-  }
-}
-
-
-
-
-
-
-
-
-body {
-  margin: 0;
-}
-div {
-  margin: 20px 0 0 0;
-}
-.marquee {
-  -webkit-animation: caption 50s linear 0s infinite;
-  font-family: "Segoe ui";
-  padding: 20px 0;
-  border: 1px solid #000;
-  background-color: #;
-  -webkit-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5),
-    0px 1px 0px rgba(250, 250, 250, 0.2);
-  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.5),
-    0px 1px 0px rgba(250, 250, 250, 0.2);
-  -webkit-transition: background-color 350ms;
-  -moz-transition: background-color 350ms;
-  transition: background-color 350ms;
-  overflow: hidden;
-  overflow-x: -webkit-marquee;
-  -webkit-marquee-direction: right;
-  -webkit-marquee-style: scroll;
-  -webkit-marquee-speed: normal;
-  -webkit-marquee-increment: small;
-  -webkit-marquee-repetition: 5;
-  overflow-x: marquee-line;
-  marquee-direction: forward;
-  marquee-style: loop;
-  marquee-speed: slow;
-  marquee-play-count: 5;
-  color: #28282a;
-  background: #ffeb95;
-}
-
-  </style>
-
-</head>
-<body>
 
 
 
@@ -134,11 +16,12 @@ div {
 body {
   background: #bdbdbd;;
   margin: 50px;
+  font-family: 'Raleway', sans-serif;
 }
 
 #desktop{
   display: block;
-  color: white;
+ 
 }
 
 #tablet, #mobile, #print {
@@ -202,7 +85,8 @@ body {
 
 
 h1 {
-  font-family:'Montserrat';
+  /*font-family:'Montserrat';*/
+  font-family: 'Raleway', sans-serif;
   font-weight:700;
   font-size:42px;
   text-shadow:0 0 14px #777;
@@ -214,18 +98,20 @@ h1 {
 }
 
 #pista {
-  width:800px;
+  width:800px; 
   height:425px;
-  background:#CCC url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/brick-background.png);
-  border:1px solid #888;
+  background:#CCC url(track-01.jpg);
+  border:10px solid #888;
   margin:auto;
-  border-right:10px solid #A00;
+/*  border-right:10px solid #A00;*/
 }
 
 #panel {
   width:800px;
   height:100px;
   margin:auto;
+  margin-top:100px;
+  /*margin-left: 130px;*/
 }
 
 #panel li, #panel div, #panel ul, #panel button { 
@@ -261,43 +147,55 @@ h1 {
 
 
 
-
-<h1>Speed</h1>
+ <div id="desktop">
+<h1>Net Neutrality</h1>
 <div id="pista">
-  <img id="chrome" class="browser" src="https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/chrome-icon.png" data-x="0">
-  <img id="firefox" class="browser" src="https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/firefox-icon.png" data-x="0">
-  <img id="ie" class="browser" src="https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/ie-icon.png" data-x="0">
-  <img id="opera" class="browser" src="https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/opera-icon.png" data-x="0">
+  <img id="Facebook" class="browser" src="11.png" data-x="0">
+  <img id="firefox" class="browser" src="22.png" data-x="0">
+  <img id="ie" class="browser" src="33.png" data-x="0">
+  <img id="opera" class="browser" src="44.png" data-x="0">
   <img id="safari" class="browser" src="https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/safari-icon.png" data-x="0">
-  <img id="edge" class="browser" src="https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/edge-icon.png" data-x="0">
+  <img id="edge" class="browser" src="https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/chrome-icon.png" data-x="0">
 </div>
 
 <div id="panel">
   <ul>
     <li>
-      <strong>Money</strong>: 
+      <strong>Facebook</strong>: 
       <input id="money" type="number" min="5" max="100" value="100" step="5">
     <li>
-      <strong>Apuesta</strong>: 
+      <strong>YouTube</strong>: 
       <input id="bet" type="number" min="5" max="100" value="25" step="5">
-    <li>Apostar por: 
+      <li>
+       <strong>Netflix</strong>: 
+      <input id="bet" type="number" min="5" max="100" value="50" step="5">
+      <li>
+       <strong>Google</strong>: 
+      <input id="bet" type="number" min="5" max="100" value="25" step="5">
+      <li>
+       <strong>Sfari</strong>: 
+      <input id="bet" type="number" min="5" max="100" value="25" step="5">
+      <li>
+       <strong>Chrome</strong>: 
+      <input id="bet" type="number" min="5" max="100" value="25" step="5">
+    <li>Winner: 
       <select id="apuesta">
-        <option value="chrome" label="Google Chrome">
-        <option value="firefox" label="Mozilla Firefox">
-        <option value="edge" label="Microsoft Edge">
-        <option value="safari" label="Apple Safari">
-        <option value="ie" label="Internet Explorer">
-        <option value="opera" label="Opera">
+        <option value="Facebook" label="Facebook">
+        <option value="YouTube" label="YouTube">
+        <option value="Netflix" label="Netflix">
+        <option value="Google" label="Google">
+        <option value="Sfari" label="Sfari">
+        <option value="Chrome" label="Chrome">
       </select>
-     <li>
-       <input id="realistic" type="checkbox" onClick="toggleRMode()"> Realistic mode      
+     <!-- <li>
+       <input id="realistic" type="checkbox" onClick="toggleRMode()"> Realistic mode  -->     
   </ul>
   <div id="botones">
-    <button id="start" onClick="start_race()">Iniciar carrera</button>
-    <button id="prepare" onClick="prepare_race()" disabled>Reiniciar</button>
+    <button id="start" onClick="start_race()">Start</button>
+    <button id="prepare" onClick="prepare_race()" disabled>Restart</button>
   </div>
 </div>
-
+</div>
 
 
 
@@ -306,8 +204,7 @@ h1 {
 
 
     <div id="print">
-      This is print
-      <img src="23.jpg">
+      <img src="winner.png">
     </div>
 
 	
@@ -315,12 +212,12 @@ h1 {
 
 <script>
 var browsers = {
-  chrome: document.getElementById('chrome'),
-  firefox: document.getElementById('firefox'),
-  ie: document.getElementById('ie'),
-  opera: document.getElementById('opera'),
-  safari: document.getElementById('safari'),
-  edge: document.getElementById('edge')
+  Facebook: document.getElementById('Facebook'),
+  YouTube: document.getElementById('firefox'),
+  Netflix: document.getElementById('ie'),
+  Google: document.getElementById('opera'),
+  Sfari: document.getElementById('safari'),
+  Chrome: document.getElementById('edge')
 }
 
 var money = document.getElementById('money'),
@@ -369,11 +266,11 @@ function race() {
   if (end) {
     var msg
     if (apuesta == end) {
-      msg = '¡Enhorabuena! Ganó: '+end
+      msg = 'Congratulations: '+end
       money.value = Number(money.value) + Number(bet.value)
     }
     else {
-      msg = '¡Lástima! Ganó: ' +end
+      msg = 'Winner: ' +end
       money.value = Number(money.value) - Number(bet.value)
     }
     alert(msg)
