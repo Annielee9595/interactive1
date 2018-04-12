@@ -26,7 +26,8 @@ body {
 /* iPad */
 @media (min-width: 668px) and (max-width: 1024px) { 
   body {
-    background: grey;
+    /*background: grey;*/
+    background: #1717C6;
 
   }
 
@@ -44,7 +45,8 @@ body {
 @media (min-width: 375px) and (max-width: 667px) { 
   
   body {
-    background: white;
+    /*background: white;*/
+    background: #1717C6;
     
   }
 
@@ -204,7 +206,7 @@ body {
 }
 
 .fcc-ctas__divider {
-  border-top: 1px dashed white;
+  border-top: 2px dashed white;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -234,8 +236,8 @@ body {
 
 <div class="free-and-fair__mast">
     <h1 class="fcc-message">
-    <span class="fcc-message__line">The free and fair internet is under attack.</span>
-    <br>
+   <!--  <span class="fcc-message__line">The free and fair internet is under attack.</span>
+    <br> -->
     <span class="fcc-message__line is-typed" id="typed" ></span>
 </h1>
 </div>
@@ -243,31 +245,43 @@ body {
 
 <div class="fcc-ctas">
     <div class="fcc-ctas__col">
-        <h1>01 - GET INFORMED</h1>
+        <h1>01 - About</h1>
         <div class="fcc-ctas__divider"></div>
         <ul>
             <li>
                 <a href="http://nyti.ms/2znEtM5" target="_blank">
-                    <span>The New York Times</span>
-                    <span>→</span>
+                    <span>What is Net Neutrality?</span>
+                   <!--  <span>→</span> -->
                 </a>
             </li>
             <li>
-                <a href="http://tcrn.ch/2jezPW1" target="_blank">
-                    <span>TechCrunch</span>
-                    <span>→</span>
+                   <a href="http://nyti.ms/2znEtM5" target="_blank">
+                    <span>Who supports it?</span>
+                    <!-- <span>→</span> -->
+                </a>
+            </li>
+            <li>
+                   <a href="http://nyti.ms/2znEtM5" target="_blank">
+                    <span>Who opposes it?</span>
+                    <!-- <span>→</span> -->
                 </a>
             </li>
         </ul>
     </div>
     <div class="fcc-ctas__col">
-        <h1>02 - TELL YOUR LOCAL LEADERS WHAT YOU THINK</h1>
+        <h1>02 - Design</h1>
         <div class="fcc-ctas__divider"></div>
         <ul>
             <li>
                 <a href="https://www.usa.gov/elected-officials" target="_blank">
-                    <span>Contact your elected officials</span>
-                    <span>→</span>
+                    <span>Racing</span>
+                    <!-- <span>→</span> -->
+                </a>
+            </li>
+            <li>
+                <a href="https://www.usa.gov/elected-officials" target="_blank">
+                    <span>Screens</span>
+                    <!-- <span>→</span> -->
                 </a>
             </li>
         </ul>
@@ -304,7 +318,7 @@ body {
 
 var typed = new Typed('.is-typed', {
     stringsElement: '#typed-strings',
-    strings: ['Help us protect net neutrality.',],
+    strings: ['This site is about net neutrality.',],
     typeSpeed: 40,
     startDelay: 500,
     cursorChar: '_',
