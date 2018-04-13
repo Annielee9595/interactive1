@@ -14,8 +14,8 @@
   * { margin: 0px; padding: 0px; }
 
 body {
-  /*background: #bdbdbd;*/
-  background: #1717C6;
+  background: #bdbdbd;
+  /*background: #1717C6;*/
   margin: 50px;
   font-family: 'Raleway', sans-serif;
 }
@@ -221,9 +221,9 @@ img.hover-shadow {
   transition: 0.3s
 }
 
-.hover-shadow:hover {
+/*.hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-}
+}*/
   </style>
 
 </head>
@@ -237,7 +237,8 @@ img.hover-shadow {
 
 <div class="row">
   <div class="column">
-    <img src="ibm.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <a href="https://www.notfound.com/" target="_blank">
+    <img src="ibm.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
     
   </div>
   <div class="column">
@@ -330,49 +331,51 @@ img.hover-shadow {
 
 
     <div id="print">
-      <img src="winner.png">
+      <img src="loading2.png">
+      <img src="loading1.png"><br/><br/><br/>
+      <img src="loading2.png">
     </div>
 
 	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <script>
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
-}
+// function openModal() {
+//   document.getElementById('myModal').style.display = "block";
+// }
 
-function closeModal() {
-  document.getElementById('myModal').style.display = "none";
-}
+// function closeModal() {
+//   document.getElementById('myModal').style.display = "none";
+// }
 
-var slideIndex = 1;
-showSlides(slideIndex);
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("demo");
+//   var captionText = document.getElementById("caption");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+//   captionText.innerHTML = dots[slideIndex-1].alt;
+// }
 </script>
 </body>
 </html>
