@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Friendly Print</title>
+<style type="text/css">
+body
+{
+font-family: Trebuchet MS;
+}
+</style>
+<script type="text/javascript">
+function PrintThisDiv(id) {
+var HTMLContent = document.getElementById(id);
+var Popup = window.open('about:blank', id, 'width=500,height=500');
+
+Popup.document.writeln('<html><head>');
+Popup.document.writeln('<style type="text/css">');
+Popup.document.writeln('body{font-family: Trebuchet MS;}');
+Popup.document.writeln('.no-print{display: none;}');
+Popup.document.writeln('</style>');
+Popup.document.writeln('</head><body>');
+Popup.document.writeln('<a href="javascript:;" onclick="window.print();">Imprimir</a>');
+Popup.document.writeln(HTMLContent.innerHTML);
+Popup.document.writeln('</body></html>');
+Popup.document.close();
+Popup.focus();
+}
+</script>
+</head>
+<body>
+<form id="form1" runat="server">
+<div style="font-weight: bold; background-color: green">
+<img src="images/excel.png" />
+Esta es la cabecera de página
+</div>
+<div id="MainDiv" style="text-align: center">
+<a class="no-print" href="javascript:;" onclick="PrintThisDiv('MainDiv')">Previsualizar impresión de página</a>
+<div id="print1" style="background-color: #ACFA58">
+<a class="no-print" href="javascript:;" onclick="PrintThisDiv('print1')" style="float: right">
+Previsualizar impresión</a>
+<h3>
+Sección a imprimir</h3>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen book.
+It has survived not only five centuries, but also the leap into electronic typesetting,
+remaining essentially unchanged....
+</div>
+<div id="print2" style="background-color: #AEB404">
+<a class="no-print" href="javascript:;" onclick="PrintThisDiv('print2')" style="float: right">
+Previsualizar impresión</a>
+<h3>
+Otra sección a imprimir</h3>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen book.
+It has survived not only five centuries, but also the leap into electronic typesetting,
+remaining essentially unchanged...
+</div>
+</div>
+<div style="background-color: #04B4AE;">
+<h3>
+Este es el pie de página</h3>
+</div>
+</form>
+</body>
+</html>

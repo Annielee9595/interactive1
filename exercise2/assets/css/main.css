@@ -1,0 +1,27 @@
+* {margin: 0px; padding 0px;}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#buttons {
+	padding: 100px;
+}
+
+.break {display: none;}
+
+
+@media print {
+
+	#buttons {
+		display: none;
+	}
+
+	.break	{ 
+		line-height: 100vh;
+		font-size: 55px;
+		display: block; 
+		page-break-before: always; 
+		text-align: center;
+	}
+}
