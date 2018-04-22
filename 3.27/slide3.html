@@ -1,0 +1,716 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+  <!-- Set the Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <style>
+
+
+
+                                                                         /*  slide*/
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Lusitana);
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/*body {
+  font-family: "Varela Round";
+  background: #444444;
+}
+*/
+#header {
+  background: black;
+  background-size: cover;
+  position: fixed;
+  height: 90%;
+  bottom: 10%;
+  right: 0;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+}
+/*#header .center {
+  background: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  position: absolute;
+  color: #FFFFFF;
+  color: #F5F7FA;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+#header .center .middle {
+  position: absolute;
+  margin-top: -8em;
+  right: 0;
+  left: 0;
+  top: 50%;*/
+}
+#header .center .middle h1 {
+  font-family: "Lusitana";
+  font-weight: normal;
+  line-height: 1em;
+  font-size: 11em;
+  margin: 0;
+}
+/*#header .center .middle span {
+  line-height: 5em;
+  font-size: 1em;*/
+}
+
+#pageHr {
+  background: #FFFFFF;
+  position: relative;
+  height: 5px;
+  display: block;
+  right: 0px;
+  left: 0px;
+  top: 90%;
+  z-index: 1;
+}
+#pageHr > i {
+  margin: -25px;
+  border: 5px solid #FFFFFF;
+  height: 40px;
+  width: 40px;
+  background: #48CFAD;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#pageHr > i > i {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  line-height: 36.8px;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  position: absolute;
+  color: #FFFFFF;
+  display: block;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#page {
+  background: white;
+  position: relative;
+  height: 400%;
+  top: 90%;
+  padding: 10% 40px;
+  text-align: center;
+}
+#page a {
+  color: #fff;
+}
+
+
+
+
+                                               /*First slide about net neutryality*/
+
+ @use postcss-simple-vars;
+@use postcss-conditionals;
+@use postcss-each;
+@use postcss-for;
+@use postcss-nested;
+
+/* fonts */
+/*@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro: 400, 300);
+
+:root {
+  --color: #11f930;
+}*/
+
+html, 
+body {
+  background: #222;
+  color: white;
+  font-family: 'Source Code Pro', 'Inconsolata', monospace;
+}
+
+#gutter {
+  display: inline-block;
+  width: 5%;
+  height: 100vh;
+
+}
+
+#container {
+  display: inline-block;
+  margin-top: 8em;
+  width: 100%;
+  max-width: 50%;
+  float: left;
+  margin-left: 24em;
+}
+
+#text {
+  display: inline-block;
+  margin: .8em 0;
+}
+
+.cursor {
+  display: inline-block;
+  height: 1.2em;
+  width: .5em;
+  background: white; 
+  margin-top: .3em;
+  margin-left: -.5em;
+  
+}
+
+.prompt {
+  color: var(white);
+}
+
+.hide {
+  display: none;
+}
+
+
+
+
+
+* { margin: 0px; padding: 0px; }
+
+#desktop{
+  display: block;
+  color: white;
+}
+
+#tablet, #mobile, #print {
+  display: none;
+}
+
+/* iPad */
+@media (min-width: 668px) and (max-width: 1024px) { 
+  body {
+    background: grey;
+  }
+
+  #tablet{
+    display: block;
+  }
+
+  #desktop, #mobile, #print {
+    display: none;
+  }
+
+}
+
+/* iPhone 6 */
+@media (min-width: 375px) and (max-width: 667px) { 
+  
+  body {
+    background: white;
+    
+  }
+
+  #mobile{
+    display: block;
+  }
+
+  #desktop, #tablet, #print {
+    display: none;
+  }
+}
+
+/* print */
+@media print {
+  
+  body {
+    background: white;
+  }
+
+  #print{
+    display: block;
+  }
+
+  #desktop, #tablet, #mobile {
+    opacity: 0;
+  }
+}
+
+
+/*img {
+    opacity: 0.5;}*/
+
+
+
+                                                /*race*/
+
+
+
+#panel {
+  width:1100px;
+  height:100px;
+  margin:auto;
+  margin-top:100px;
+  color: black;
+  line-height: 300%;
+  /*margin-left: 130px;*/
+}
+
+#panel li, #panel div, #panel ul, #panel button { 
+  display:inline-block
+  /*font-size: 10px;*/
+}
+
+#panel li { padding-right:2em
+ }
+
+
+
+#panel input[type="number"] {
+  width:42px;
+  border:1px solid #CCC;
+  padding:3px;
+}
+
+
+
+
+
+
+
+
+
+#race {
+  text-align: center;
+  background: linear-gradient(right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#racetrack {
+/*  background: url("https://github.com/cjbeowulf/codepenimgs/blob/master/road_zpsho1ia8tt.JPG?raw=true") center left repeat-x;*/
+  height: 600px;
+  width: 1500px;
+  border-right: dashed 8px black;
+ /* margin-right: 10px;*/
+  box-sizing: border-box;
+  margin: 20px 0;
+}
+
+.car {
+  display: block;
+  position: relative;
+}
+
+#car1 {
+  top: 10px;
+}
+
+#car2 {
+  top: 50px;
+}
+#car3 {
+  top: 90px;
+}
+#car4 {
+  top: 130px;
+}
+#car5 {
+  top: 170px;
+}
+#car6 {
+  top: 210px;
+}
+
+#raceInfoContainer {
+  width: 50%;
+  margin-top: 1100px;
+  /*margin-left: 40px;*/
+  /*margin: 40px auto 0;*/
+  margin:auto;
+  background-color: #333;
+  align-self: center;
+  height: 380px;
+
+}
+
+#raceInfoContainer h2 {
+  color: white;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.raceInfo {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.raceInfo span {
+  display: block;
+  font-weight: normal;
+  font-size: 1em;
+  color: white;
+}
+
+#raceInfo1 {
+  color: white;
+}
+
+#raceInfo1 {
+  color: white;
+}
+
+input[type='button'] {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+input:active {
+  position: relative;
+  top: 1px;
+}
+
+input#reset {
+  color: black;
+  background-color: lightgrey;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+  </style>
+
+</head>
+<body>
+<div id="print">
+  <img src="pp.png">
+      <img src="p1.png">
+       <img src="p2.png">
+       <img src="p3.png">
+       <img src="p4.png">
+       <img src="p5.png">
+    </div>
+
+
+
+    
+<div id="desktop">
+<div id="header">
+  <div class="center" id="headerc">
+    <div class="middle">
+      <div id="gutter"></div>
+<div id="container"><span class="prompt">  </span>
+  <div id="text"></div>
+  <div class="cursor"></div>
+</div>
+      <span></span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- <div id="pageHr"> 
+  <i><i></i></i>
+</div> -->
+
+<div id="page">
+  
+
+ <div id="desktop">
+  <div id="page">
+  <div id="panel">
+    
+  <ul>
+    <li>
+      <strong>Facebook</strong>: 
+      <input id="money" type="number" min="5" max="100" value="60" step="5">
+    <li>
+      <strong>YouTube</strong>: 
+      <input id="bet" type="number" min="5" max="100" value="100" step="5">
+      <li>
+       <strong>Netflix</strong>: 
+      <input id="bet" type="number" min="5" max="100" value="80" step="5">
+      <li>
+       <strong>Google</strong>: 
+      <input id="bet" type="number" min="5" max="100" value="40" step="5">
+      <li>
+       <strong>Twitter</strong>: 
+      <input id="bet" type="number" min="5" max="100" value="35" step="5">
+      <li>
+       <strong>Chrome</strong>: 
+      <input id="bet" type="number" min="5" max="100" value="65" step="5">
+  
+
+</div>
+</div>
+<div id="page">
+<input type='button' value='Start!' id='go'>
+  <input type='button' value='Reset' id='reset'></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<div id="page">
+<body id='race'>
+  
+  
+  <div id="racetrack">
+    <img src='a1.png' alt='black car' id='car1' class='car'>
+    <img src='a2.png' alt='blue car' id='car2' class='car'>
+    <img src='a3.png' alt='black car' id='car3' class='car'>
+    <img src='a4.png' alt='blue car' id='car4' class='car'>
+    <img src='a5.png' alt='black car' id='car5' class='car'>
+    <img src='a6.png' alt='blue car' id='car6' class='car'>
+
+
+<!--    <img src='http://i1278.photobucket.com/albums/y519/charliejaime10/online%20project%20pics/car_red_zpsuwfccbkl.png' alt='red car' id='car3' class='car'> -->
+  </div>
+  <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+  <div id="page">
+  <div id='raceInfoContainer' class='clearfix'>
+    <h2>Results</h2>
+    <div id='raceInfo1' class='raceInfo'>Facebook<span></span></div>
+    <div id='raceInfo2' class='raceInfo'>You Tube<span></span></div>
+    <div id='raceInfo3' class='raceInfo'>Netflix<span></span></div>
+    <div id='raceInfo4' class='raceInfo'>Google<span></span></div>
+    <div id='raceInfo5' class='raceInfo'>Twitter<span></span></div>
+    <div id='raceInfo6' class='raceInfo'>Chrome<span></span></div>
+
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+// Change this to increase or slow typing speed
+// The console will type each letter at a random interval between 0ms and `speed` ms.
+$(document).scroll(function() {
+  var st = $(this).scrollTop();
+  $("#header").css({
+    "background-position-y": (-st/20)
+  })
+  $("#headerc").css({
+    "top": (-st/5),
+    "bottom": (st/5)
+  })
+});
+
+
+
+// Change this to increase or slow typing speed
+// The console will type each letter at a random interval between 0ms and `speed` ms.
+let speed = 150;
+let cursorSpeed = 400;
+let time = 0;
+let prevTime = 0;
+
+// Change this variable to change what gets typed
+let text = 'Net neutrality is defined as internet providers allowing clients the same traffic speed, and not slowing any traffic to beat competitors. All companies should give the same same network speed to all buyers. They should not be allowed to block or slow down the speed of the internet just because some people pay more money for it. All people in all types of companies should provide the same internet speed.';
+
+function writeWord(word) {
+  for (let c in word.split('')) {
+    time = Math.floor(Math.random() * speed);
+
+    setTimeout(() => {
+      $('#text').before(word[c]);
+    }, (prevTime + time));
+
+    prevTime += time;
+  }
+}
+
+writeWord(text);
+
+// blink cursor 
+window.setInterval(() => {
+  $('.cursor').toggleClass('hide');
+}, cursorSpeed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// race
+
+// Click function to start Race
+$('#go').click(function(){
+  
+  //function check to see if race is complete
+  function checkIfComplete(){
+    if(isComplete == false){
+      isComplete = true;
+    } else{
+      place = 'Loser';
+    }
+  }
+  
+  //gets width of cars  
+  let carWidth = $('#car1').width();
+  //gets width of racetrack
+  let raceTrackWidth = $('#racetrack').width() - carWidth;
+  
+  //Generate rand Num
+  let raceTime1 = Math.floor(Math.random() * 5000 + 1);
+  let raceTime2 = Math.floor(Math.random() * 1000 + 1);
+  let raceTime3 = Math.floor(Math.random() * 2000 + 1);
+  let raceTime4 = Math.floor(Math.random() * 6000 + 1);
+  let raceTime5 = Math.floor(Math.random() * 8000 + 1);
+  let raceTime6 = Math.floor(Math.random() * 3000 + 1);
+
+  
+  //flag var
+  let isComplete = false;
+  
+  let place = 'Winner';
+
+  
+  
+  //animate cars
+  $('#car1').animate({
+    left: raceTrackWidth
+  }, raceTime1, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo1 span').text( place );
+  });
+  
+  $('#car2').animate({
+    left: raceTrackWidth
+  }, raceTime2, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo2 span').text( place );
+  });
+
+  $('#car3').animate({
+    left: raceTrackWidth
+  }, raceTime3, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo3 span').text( place );
+  });
+    $('#car4').animate({
+    left: raceTrackWidth
+  }, raceTime4, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo4 span').text( place );
+  });
+    $('#car5').animate({
+    left: raceTrackWidth
+  }, raceTime5, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo5 span').text( place );
+  });
+    $('#car6').animate({
+    left: raceTrackWidth
+  }, raceTime6, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo6 span').text( place );
+  });
+});
+
+
+$('#reset').click(function(){
+  $('.car').css('left', '0');
+  $('.raceInfo span').text('');
+});
+
+
+
+</script>
+</body>
+</html>

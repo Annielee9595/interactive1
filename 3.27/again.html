@@ -1,0 +1,411 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+  <!-- Set the Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <style>
+  * { margin: 0px; padding: 0px; }
+
+body {
+  background: white;
+  /*background-image: url("ma5.gif")*/
+
+  margin: 50px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#desktop{
+  display: block;
+  background-color: white;
+  /*border:2px solid black;*/
+
+ 
+}
+
+#tablet, #mobile, #print {
+  display: none;
+}
+
+/* iPad */
+@media (min-width: 668px) and (max-width: 1024px) { 
+  body {
+    background: white;
+
+  }
+
+  #tablet{
+    display: block;
+    /*position: static;*/
+  }
+
+  #desktop, #mobile, #print {
+    display: none;
+  }
+
+}
+
+/* iPhone 6 */
+@media (min-width: 375px) and (max-width: 667px) { 
+  
+  body {
+    /*background: white;*/
+    background-image: url("mac2.gif")
+    
+  }
+
+  #mobile{
+    display: block;
+  }
+
+  #desktop, #tablet, #print {
+    display: none;
+  }
+}
+
+/* print */
+@media print {
+  
+  body {
+    background: black;
+  }
+
+  #print{
+    display: block;
+    background: black;
+  }
+
+  #desktop, #tablet, #mobile {
+    opacity: 0;
+  }
+}
+
+
+
+/*img {
+    opacity: 0.5;}*/
+
+
+
+
+
+#race {
+  text-align: center;
+  background: linear-gradient(right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#racetrack {
+/*  background: url("https://github.com/cjbeowulf/codepenimgs/blob/master/road_zpsho1ia8tt.JPG?raw=true") center left repeat-x;*/
+  height: 600px;
+  border-right: dashed 8px black;
+ /* margin-right: 10px;*/
+  box-sizing: border-box;
+  margin: 20px 0;
+}
+
+.car {
+  display: block;
+  position: relative;
+}
+
+#car1 {
+  top: 10px;
+}
+
+#car2 {
+  top: 50px;
+}
+#car3 {
+  top: 90px;
+}
+#car4 {
+  top: 130px;
+}
+#car5 {
+  top: 170px;
+}
+#car6 {
+  top: 210px;
+}
+
+#raceInfoContainer {
+  width: 50%;
+  margin-top: 1100px;
+  /*margin-left: 40px;*/
+  /*margin: 40px auto 0;*/
+  margin:auto;
+  background-color: #333;
+  align-self: center;
+  height: 380px;
+
+}
+
+#raceInfoContainer h2 {
+  color: white;
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.raceInfo {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.raceInfo span {
+  display: block;
+  font-weight: normal;
+  font-size: 1em;
+  color: white;
+}
+
+#raceInfo1 {
+  color: white;
+}
+
+#raceInfo1 {
+  color: white;
+}
+
+input[type='button'] {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+input:active {
+  position: relative;
+  top: 1px;
+}
+
+input#reset {
+  color: black;
+  background-color: lightgrey;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+  </style>
+
+</head>
+<body>
+
+<!-- <!-- <div id="tablet">
+  <!--  <img src="1.jpg"> -->
+    
+       <!--  <h1>Fifa World Ranking Top 20</h1> -->
+     <!--  </header>
+      <div class="wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Winner</th>
+              <th>Money</th>
+              <th>+/-</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td class="rank">1</td>
+                <td class="team">facebook</td>
+                <td class="points">1460</td>
+                <td class="up-down">0</td>
+              </tr>
+            <tr>
+                <td class="rank">2</td>
+                <td class="team">YouTube</td>
+                <td class="points">1340</td>
+                <td class="up-down">0</td>
+              </tr>
+              <tr>
+                <td class="rank">3</td>
+                <td class="team">Netflix</td>
+                <td class="points">1245</td>
+                <td class="up-down">0</td>
+              </tr>
+              <tr>
+                <td class="rank">4</td>
+                <td class="team">google</td>
+                <td class="points">1210</td>
+                <td class="up-down">0</td>
+              </tr>
+              <tr>
+                <td class="rank">5</td>
+                <td class="team">Twitter</td>
+                <td class="points">1186</td>
+                <td class="up-down">0</td>
+              </tr>
+              <tr>
+                <td class="rank">6</td>
+                <td class="team">Chrome</td>
+                <td class="points">1181</td>
+                <td class="up-down">0</td>
+              </tr>
+         
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div> -->
+
+ <div id="desktop">
+<body id='race'>
+  <input type='button' value='Start!' id='go'>
+  <input type='button' value='Reset' id='reset'>
+  
+  <div id="racetrack">
+    <img src='a1.png' alt='black car' id='car1' class='car'>
+    <img src='a2.png' alt='blue car' id='car2' class='car'>
+    <img src='a3.png' alt='black car' id='car3' class='car'>
+    <img src='a4.png' alt='blue car' id='car4' class='car'>
+    <img src='a5.png' alt='black car' id='car5' class='car'>
+    <img src='a6.png' alt='blue car' id='car6' class='car'>
+
+
+<!--    <img src='http://i1278.photobucket.com/albums/y519/charliejaime10/online%20project%20pics/car_red_zpsuwfccbkl.png' alt='red car' id='car3' class='car'> -->
+  </div>
+  
+  <div id='raceInfoContainer' class='clearfix'>
+    <h2>Results</h2>
+    <div id='raceInfo1' class='raceInfo'>Facebook<span></span></div>
+    <div id='raceInfo2' class='raceInfo'>You Tube<span></span></div>
+    <div id='raceInfo3' class='raceInfo'>Netflix<span></span></div>
+    <div id='raceInfo4' class='raceInfo'>Google<span></span></div>
+    <div id='raceInfo5' class='raceInfo'>Twitter<span></span></div>
+    <div id='raceInfo6' class='raceInfo'>Chrome<span></span></div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+    <!-- <div id="print">
+      <img src="p1.png">
+       <img src="p2.png">
+       <img src="p3.png">
+       <img src="p4.png">
+       <img src="p5.png">
+    </div>
+ -->
+	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+// Click function to start Race
+$('#go').click(function(){
+  
+  //function check to see if race is complete
+  function checkIfComplete(){
+    if(isComplete == false){
+      isComplete = true;
+    } else{
+      place = 'Loser';
+    }
+  }
+  
+  //gets width of cars  
+  let carWidth = $('#car1').width();
+  //gets width of racetrack
+  let raceTrackWidth = $(window).width() - carWidth;
+  
+  //Generate rand Num
+  let raceTime1 = Math.floor(Math.random() * 5000 + 1);
+  let raceTime2 = Math.floor(Math.random() * 500 + 1);
+  let raceTime3 = Math.floor(Math.random() * 2000 + 1);
+  let raceTime4 = Math.floor(Math.random() * 6000 + 1);
+  let raceTime5 = Math.floor(Math.random() * 8000 + 1);
+  let raceTime6 = Math.floor(Math.random() * 3000 + 1);
+
+  
+  //flag var
+  let isComplete = false;
+  
+  let place = 'Winner';
+
+  
+  
+  //animate cars
+  $('#car1').animate({
+    left: raceTrackWidth
+  }, raceTime1, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo1 span').text( place );
+  });
+  
+  $('#car2').animate({
+    left: raceTrackWidth
+  }, raceTime2, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo2 span').text( place );
+  });
+
+  $('#car3').animate({
+    left: raceTrackWidth
+  }, raceTime3, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo3 span').text( place );
+  });
+    $('#car4').animate({
+    left: raceTrackWidth
+  }, raceTime4, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo4 span').text( place );
+  });
+    $('#car5').animate({
+    left: raceTrackWidth
+  }, raceTime5, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo5 span').text( place );
+  });
+    $('#car6').animate({
+    left: raceTrackWidth
+  }, raceTime6, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo6 span').text( place );
+  });
+});
+
+
+$('#reset').click(function(){
+  $('.car').css('left', '0');
+  $('.raceInfo span').text('');
+});
+
+</script>
+</body>
+</html>
