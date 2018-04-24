@@ -113,7 +113,7 @@ html, body {
 #page {
   background: white;
   position: relative;
-  height: 400%;
+  height: 420%;
   top: 90%;
   padding: 10% 40px;
   text-align: center;
@@ -249,6 +249,12 @@ body {
     opacity: 0;
   }
 }
+
+#buttons {
+    display: none;
+    margin-top: 500px;
+  }
+
 
 
 /*img {
@@ -412,12 +418,13 @@ input#reset {
 <body>
 <div id="print">
   
-      <img src="p1.png">
-       <img src="p2.png">
-       <img src="p3.png">
-       <img src="p4.png">
-       <img src="p5.png">
-       <img src="p6.jpg">
+      <img src="p-01.png">
+       <img src="p-02.png">
+       <img src="p-03.png">
+       <img src="p-04.png">
+       <img src="p-05.png">
+       <img src="p-06.png">
+       <img src="p-07.png">
     </div>
 
 
@@ -449,29 +456,46 @@ input#reset {
   <div id="page">
   <div id="panel">
     
-  <ul>
-    <li>
-      <strong>Facebook</strong>: 
-      <input id="money" type="number" min="5" max="100" value="60" step="5">
-    <li>
-      <strong>YouTube</strong>: 
-      <input id="bet" type="number" min="5" max="100" value="100" step="5">
-      <li>
-       <strong>Netflix</strong>: 
-      <input id="bet" type="number" min="5" max="100" value="80" step="5">
-      <li>
-       <strong>Google</strong>: 
-      <input id="bet" type="number" min="5" max="100" value="40" step="5">
-      <li>
-       <strong>Twitter</strong>: 
-      <input id="bet" type="number" min="5" max="100" value="35" step="5">
-      <li>
-       <strong>Chrome</strong>: 
-      <input id="bet" type="number" min="5" max="100" value="65" step="5">
+  
+      <strong>Facebook</strong>: $ 
+      <input id="money" type="number" min="5" max="200" value="100" step="5">,000,000
+      <br/>
+      <strong>YouTube</strong>: $
+      <input id="bet" type="number" min="5" max="200" value="160" step="5">,000,000
+      <br/>
+       <strong>Netflix</strong>: $
+      <input id="bet" type="number" min="5" max="200" value="90" step="5">,000,000
+      <br/>
+       <strong>Google</strong>: $
+      <input id="bet" type="number" min="5" max="200" value="125" step="5">,000,000
+      <br/>
+       <strong>Twitter</strong>: $
+      <input id="bet" type="number" min="5" max="200" value="45" step="5">,000,000
+      <br/>
+       <strong>Chrome</strong>: $
+      <input id="bet" type="number" min="5" max="200" value="110" step="5">,000,000
   
 
 </div>
 </div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <div id="page">
 <input type='button' value='Start!' id='go'>
   <input type='button' value='Reset' id='reset'></div>
@@ -544,7 +568,12 @@ input#reset {
 
   </div>
 </div>
-
+<div id="page">
+<div id="buttons">
+    <h3>Do you want to know about this site? &nbsp;<input type="checkbox" name='yes' value='yes'>
+    <button id="print">print</button></h3>
+  </div>
+</div>
 
 </div>
 
@@ -637,12 +666,12 @@ $('#go').click(function(){
   let raceTrackWidth = $('#racetrack').width() - carWidth;
   
   //Generate rand Num
-  let raceTime1 = Math.floor(Math.random() * 5000 + 1);
+  let raceTime1 = Math.floor(Math.random() * 7000 + 1);
   let raceTime2 = Math.floor(Math.random() * 1000 + 1);
-  let raceTime3 = Math.floor(Math.random() * 2000 + 1);
-  let raceTime4 = Math.floor(Math.random() * 6000 + 1);
+  let raceTime3 = Math.floor(Math.random() * 8000 + 1);
+  let raceTime4 = Math.floor(Math.random() * 5000 + 1);
   let raceTime5 = Math.floor(Math.random() * 9000 + 1);
-  let raceTime6 = Math.floor(Math.random() * 3000 + 1);
+  let raceTime6 = Math.floor(Math.random() * 6000 + 1);
 
   
   //flag var
@@ -710,6 +739,14 @@ $('#reset').click(function(){
   $('.car').css('left', '0');
   $('.raceInfo span').text('');
 });
+
+
+
+
+
+
+
+
 
 
 

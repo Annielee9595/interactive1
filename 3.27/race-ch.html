@@ -1,0 +1,407 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+  <!-- Set the Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <style>
+  * { margin: 0px; padding: 0px; }
+
+body {
+  background: white;
+  /*background-image: url("ma5.gif")*/
+
+  margin: 50px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#desktop{
+  display: block;
+  background-color: white;
+  /*border:2px solid black;*/
+
+ 
+}
+
+#tablet, #mobile, #print {
+  display: none;
+}
+
+/* iPad */
+@media (min-width: 668px) and (max-width: 1024px) { 
+  body {
+    background: white;
+
+  }
+
+  #tablet{
+    display: block;
+    /*position: static;*/
+  }
+
+  #desktop, #mobile, #print {
+    display: none;
+  }
+
+}
+
+/* iPhone 6 */
+@media (min-width: 375px) and (max-width: 667px) { 
+  
+  body {
+    /*background: white;*/
+    background-image: url("mac2.gif")
+    
+  }
+
+  #mobile{
+    display: block;
+  }
+
+  #desktop, #tablet, #print {
+    display: none;
+  }
+}
+
+/* print */
+@media print {
+  
+  body {
+    background: black;
+  }
+
+  #print{
+    display: block;
+    background: black;
+  }
+
+  #desktop, #tablet, #mobile {
+    opacity: 0;
+  }
+}
+
+
+
+/*img {
+    opacity: 0.5;}*/
+
+
+
+
+h1 {
+  /*font-family:'Montserrat';*/
+  font-family: 'Raleway', sans-serif;
+  font-weight:700;
+  font-size:42px;
+  /*text-shadow:0 0 14px #777;*/
+  letter-spacing:1px;
+  width:800px;
+  margin:auto;
+  text-align:center;
+  margin-bottom:10px;
+  color: white;
+}
+
+#pista {
+  width:800px; 
+  height:425px;
+  /*background:#CCC url(track-01.jpg);*/
+ /* background:#CCC url(ma5.gif);*/
+  /*border:10px solid #888;*/
+  border:2px solid black;
+  margin:auto;
+
+/*  border-right:10px solid #A00;*/
+}
+
+#panel {
+  width:800px;
+  height:100px;
+  margin:auto;
+  margin-top:100px;
+  color: black;
+  /*margin-left: 130px;*/
+}
+
+#panel li, #panel div, #panel ul, #panel button { 
+  display:inline-block
+  /*font-size: 10px;*/
+}
+
+#panel li { padding-right:2em
+ }
+
+#panel #botones {
+  display:block;
+  width:200px;
+  margin:auto;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+#panel input[type="number"] {
+  width:42px;
+  border:1px solid #CCC;
+  padding:3px;
+}
+
+.browser {
+  width:64px;
+  height:64px;
+  margin:5px;
+  display:block;
+  transition:all 0.2s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+
+</head>
+<body>
+
+<div id="tablet">
+  <!--  <img src="1.jpg"> -->
+    
+</div>
+
+ <div id="desktop">
+<h1>Net Neutrality</h1>
+<div id="pista">
+  <img id="Facebook" class="browser" src="1111.png" data-x="0">
+  <img id="firefox" class="browser" src="222.png" data-x="0">
+  <img id="ie" class="browser" src="333.png" data-x="0">
+  <img id="opera" class="browser" src="446.png" data-x="0">
+  <img id="safari" class="browser" src="555.png" data-x="0">
+  <img id="edge" class="browser" src="666.png" data-x="0">
+</div>
+
+<div id="panel">
+  <ul>
+    <li>
+      <strong>Facebook</strong>: 
+      <input id="money" class="Facebook-bet" type="number" min="5" max="100" value="100" step="5">
+    <li>
+      <strong>YouTube</strong>: 
+      <input id="bet" class="youtube-bet" type="number" min="5" max="100" value="25" step="5">
+      <li>
+       <strong>Netflix</strong>: 
+      <input id="bet" class="ie-bet" type="number" min="5" max="100" value="50" step="5">
+      <li>
+       <strong>Google</strong>: 
+      <input id="bet" class="opera-bet" type="number" min="5" max="100" value="25" step="5">
+      <li>
+       <strong>Twitter</strong>: 
+      <input id="bet" class="safari-bet" type="number" min="5" max="100" value="25" step="5">
+      <li>
+       <strong>Chrome</strong>: 
+      <input id="bet" class="edge-bet" type="number" min="5" max="100" value="25" step="5">
+    <li>Winner: 
+      <select id="apuesta">
+        <option value="Facebook" label="Facebook">
+        <option value="YouTube" label="YouTube">
+        <option value="Netflix" label="Netflix">
+        <option value="Google" label="Google">
+        <option value="Twitter" label="Twitter">
+        <option value="Chrome" label="Chrome">
+      </select>
+     <!-- <li>
+       <input id="realistic" type="checkbox" onClick="toggleRMode()"> Realistic mode  -->     
+  </ul>
+  <div id="botones">
+    <button id="start" onClick="start_race()">Start</button>
+    <button id="prepare" onClick="prepare_race()" disabled>Restart</button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+    <div id="print">
+      <img src="p1.png">
+       <img src="p2.png">
+       <img src="p3.png">
+       <img src="p4.png">
+       <img src="p5.png">
+    </div>
+
+	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+
+
+var browsers = {
+  Facebook: document.getElementById('Facebook'),
+  YouTube: document.getElementById('firefox'),
+  Netflix: document.getElementById('ie'),
+  Google: document.getElementById('opera'),
+  Twitter: document.getElementById('safari'),
+  Chrome: document.getElementById('edge')
+}
+
+// var test = document.getElementsByClassName('Facebook-bet');
+
+var betvalue = {
+  Facebook: document.getElementsByClassName('Facebook-bet'),
+  YouTube: document.getElementsByClassName('youtube-bet'),
+  Netflix: document.getElementsByClassName('ie-bet'),
+  Google: document.getElementsByClassName('opera-bet'),
+  Twitter: document.getElementsByClassName('safari-bet'),
+  Chrome: document.getElementsByClassName('edge-bet')
+}
+
+// create an array of the bet values
+
+var money = document.getElementById('money'),
+    bet = document.getElementById('bet'),
+    iApuesta = document.getElementById('apuesta'),
+    bStart = document.getElementById('start'),
+    bPrepare = document.getElementById('prepare')
+
+// Variables de usuario
+var end = undefined,      // Ganador final de la carrera
+    apuesta = undefined,
+    realistic = false,
+    blocked = false,
+    errorSound = new Audio('https://rawgit.com/ManzDev/cursos-assets/gh-pages/js/error.mp3')
+
+// Devuelve un número aleatorio (aceleración de navegadores)
+// 3/5 veces, devuelve un número aleatorio entre 0..25
+// 2/5 veces, devuelve 0 (no se mueve)
+function random() {
+  if (Math.round(Math.random() * 5) > 2)
+    return Math.round(Math.random() * 25)
+  else
+    return 0
+}
+
+// Inicio de la carrera, parámetros de inicio
+function start_race() {
+  // Cuidado, comparar como número (evitar comparación alfanum)
+  if (Number(bet.value) > Number(money.value)) 
+    bet.value = money.value
+  if (Number(bet.value) < 5)
+    bet.value = 5
+    
+  bStart.disabled = true
+  bPrepare.disabled = true
+  iApuesta.disabled = true
+  bet.disabled = true
+  apuesta = document.getElementById('apuesta').value
+  race()
+
+}
+
+// Comprobación y continuación de la carrera
+function race() {
+  
+  // Comprobación si ya se ha terminado la carrera
+  if (end) {
+    var msg
+    if (apuesta == end) {
+      msg = 'Congratulations: '+end
+      money.value = Number(money.value) + Number(bet.value)
+    }
+    else {
+      msg = 'Winner: ' +end
+      money.value = Number(money.value) - Number(bet.value)
+    }
+    alert(msg)
+    bPrepare.disabled = false   // Libera botón de reiniciar
+    bet.max = money.value       // Actualiza apuesta máxima
+    if (money.value < 5)
+      document.querySelector('#botones').innerHTML = 'Has perdido.'    
+  } else {
+    iteration()                             // Lanzamos nueva iteración
+    setTimeout(function() { race() }, 100)  // Encadenamos una nueva
+  }
+}
+
+// Cada iteración de la carrera (def: iteraciones de 100ms)
+// Actualizamos desplazamiento del navegador en attr "data-x"
+// De esta forma, sólo tenemos que actualizar en CSS/translateX
+function iteration() {
+
+  for (e in browsers) {
+    
+    if (blocked && e == 'ie')
+      continue
+    
+    var x = parseInt(browsers[e].getAttribute('data-x'))
+    var y = 0 + (-10 + Math.round(Math.random() * 20)) // y acumulado
+    
+    // get value of the bet
+    var bet = (betvalue[e][0].value);  
+    
+    // pass bet to the x value, keep random so it's not too static
+    browsers[e].setAttribute('data-x', x + bet/10 + random() )
+    browsers[e].setAttribute('data-y', y)
+    browsers[e].style.transform = 'translate(' + x + 'px, '+ Number(y) +'px)'
+    
+    if (parseInt(browsers[e].getAttribute('data-x')) > 740) {
+      end = e
+      break
+    }
+    
+    if (realistic && (e == 'ie')) {
+      n = Math.floor(Math.random() * 30)
+      if ((n == 7) && (!blocked)) {
+        errorSound.play()
+        blocked = true
+      }
+    }
+
+    console.log(betvalue[e][0].value);
+    
+  }  
+}
+
+// Resetea la carrera para volver a iniciarla
+function prepare_race() {
+  for (e in browsers) {
+    browsers[e].setAttribute('data-x', '0')
+    browsers[e].style.transform = ''
+  }
+  end = undefined
+  bStart.disabled = false
+  bet.disabled = false
+  iApuesta.disabled = false
+  blocked = false
+}
+
+function toggleRMode() {
+  r = document.getElementById('realistic').checked
+  if (r)
+    realistic = true
+  else
+    realistic = false  
+}
+
+</script>
+</body>
+</html>

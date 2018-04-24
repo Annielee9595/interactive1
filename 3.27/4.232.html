@@ -145,6 +145,7 @@ body {
   background: #222;
   color: white;
   font-family: 'Source Code Pro', 'Inconsolata', monospace;
+
 }
 
 #gutter {
@@ -260,13 +261,38 @@ body {
 
 
 
+h1 {
+  /*font-family:'Montserrat';*/
+  font-family: 'Raleway', sans-serif;
+  font-weight:700;
+  font-size:42px;
+  /*text-shadow:0 0 14px #777;*/
+  letter-spacing:1px;
+  width:800px;
+  margin:auto;
+  text-align:center;
+  margin-bottom:10px;
+  color: white;
+}
+
+#pista {
+  width:800px; 
+  height:425px;
+  /*background:#CCC url(track-01.jpg);*/
+ /* background:#CCC url(ma5.gif);*/
+  /*border:10px solid #888;*/
+  border:2px solid black;
+  margin:auto;
+
+/*  border-right:10px solid #A00;*/
+}
+
 #panel {
-  width:1100px;
+  width:800px;
   height:100px;
   margin:auto;
   margin-top:100px;
   color: black;
-  line-height: 300%;
   /*margin-left: 130px;*/
 }
 
@@ -278,7 +304,18 @@ body {
 #panel li { padding-right:2em
  }
 
+#panel #botones {
+  display:block;
+  width:200px;
+  margin:auto;
 
+  /*color: white;
+  padding: 10px 20px;
+  border: none;
+  text-align: left;
+ */
+
+}
 
 #panel input[type="number"] {
   width:42px;
@@ -286,7 +323,13 @@ body {
   padding:3px;
 }
 
-
+.browser {
+  width:64px;
+  height:64px;
+  margin:5px;
+  display:block;
+  transition:all 0.2s linear;
+}
 
 
 
@@ -379,12 +422,12 @@ body {
   color: white;
 }
 
-input[type='button'] {
+/*input[type='button'] {
   background-color: black;
   color: white;
   padding: 10px 20px;
   border: none;
-}
+}*/
 
 input:active {
   position: relative;
@@ -447,7 +490,99 @@ input#reset {
 
  <div id="desktop">
   <div id="page">
-  <div id="panel">
+    <div id="panel">
+  
+    
+      <strong>Facebook</strong>: $
+      <input id="money" class="Facebook-bet" type="number" min="5" max="200" value="100" step="5">,000,000<br/><br/>
+    
+      <strong>YouTube</strong>: $
+      <input id="bet" class="youtube-bet" type="number" min="5" max="200" value="25" step="5">,000,000
+     <br/><br/>
+       <strong>Netflix</strong>: $
+      <input id="bet" class="ie-bet" type="number" min="5" max="200" value="50" step="5">,000,000
+      <br/><br/>
+       <strong>Google</strong>: $
+      <input id="bet" class="opera-bet" type="number" min="5" max="200" value="75" step="5">,000,000
+      <br/><br/>
+       <strong>Twitter</strong>: $
+      <input id="bet" class="safari-bet" type="number" min="5" max="200" value="25" step="5">,000,000
+      <br/><br/>
+       <strong>Chrome</strong>: $
+      <input id="bet" class="edge-bet" type="number" min="5" max="200" value="25" step="5">,000,000
+    <br/>
+      <select id="apuesta">
+        <option value="Facebook" label="Facebook">
+        <option value="YouTube" label="YouTube">
+        <option value="Netflix" label="Netflix">
+        <option value="Google" label="Google">
+        <option value="Twitter" label="Twitter">
+        <option value="Chrome" label="Chrome">
+      </select>
+     <!-- <li>
+       <input id="realistic" type="checkbox" onClick="toggleRMode()"> Realistic mode  -->     
+
+  <div id="page">
+  <div id="botones">
+    <button id="start" onClick="start_race()">Start</button>
+    <button id="prepare" onClick="prepare_race()" disabled>Restart</button>
+  </div>
+</div>
+</div>
+
+  <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div id="page"></div>
+<div id="page">
+<div id="pista">
+  <img id="Facebook" class="browser" src="1111.png" data-x="0">
+  <img id="firefox" class="browser" src="222.png" data-x="0">
+  <img id="ie" class="browser" src="333.png" data-x="0">
+  <img id="opera" class="browser" src="446.png" data-x="0">
+  <img id="safari" class="browser" src="555.png" data-x="0">
+  <img id="edge" class="browser" src="666.png" data-x="0">
+</div>
+</div>
+
+
+<!--   <div id="panel">
     
   <ul>
     <li>
@@ -510,29 +645,9 @@ input#reset {
 
 <!--    <img src='http://i1278.photobucket.com/albums/y519/charliejaime10/online%20project%20pics/car_red_zpsuwfccbkl.png' alt='red car' id='car3' class='car'> -->
   </div>
-  <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
-  <div id="page">
+
+<!--   <div id="page">
   <div id='raceInfoContainer' class='clearfix'>
     <h2>Results</h2>
     <div id='raceInfo1' class='raceInfo'>Facebook<span></span></div>
@@ -543,16 +658,16 @@ input#reset {
     <div id='raceInfo6' class='raceInfo'>Chrome<span></span></div>
 
   </div>
+</div> 
+ -->
+
 </div>
 
 
-</div>
 
 
 
-
-
-	
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <script>
@@ -617,99 +732,256 @@ window.setInterval(() => {
 
 
 
+
+
+
+
+
+
+
 // race
+var browsers = {
+  Facebook: document.getElementById('Facebook'),
+  YouTube: document.getElementById('firefox'),
+  Netflix: document.getElementById('ie'),
+  Google: document.getElementById('opera'),
+  Twitter: document.getElementById('safari'),
+  Chrome: document.getElementById('edge')
+}
+
+// var test = document.getElementsByClassName('Facebook-bet');
+
+var betvalue = {
+  Facebook: document.getElementsByClassName('Facebook-bet'),
+  YouTube: document.getElementsByClassName('youtube-bet'),
+  Netflix: document.getElementsByClassName('ie-bet'),
+  Google: document.getElementsByClassName('opera-bet'),
+  Twitter: document.getElementsByClassName('safari-bet'),
+  Chrome: document.getElementsByClassName('edge-bet')
+}
+
+// create an array of the bet values
+
+var money = document.getElementById('money'),
+    bet = document.getElementById('bet'),
+    iApuesta = document.getElementById('apuesta'),
+    bStart = document.getElementById('start'),
+    bPrepare = document.getElementById('prepare')
+
+// Variables de usuario
+var end = undefined,      // Ganador final de la carrera
+    apuesta = undefined,
+    realistic = false,
+    blocked = false,
+    errorSound = new Audio('https://rawgit.com/ManzDev/cursos-assets/gh-pages/js/error.mp3')
+
+// Devuelve un número aleatorio (aceleración de navegadores)
+// 3/5 veces, devuelve un número aleatorio entre 0..25
+// 2/5 veces, devuelve 0 (no se mueve)
+function random() {
+  if (Math.round(Math.random() * 5) > 2)
+    return Math.round(Math.random() * 25)
+  else
+    return 0
+}
+
+// Inicio de la carrera, parámetros de inicio
+function start_race() {
+  // Cuidado, comparar como número (evitar comparación alfanum)
+  if (Number(bet.value) > Number(money.value)) 
+    bet.value = money.value
+  if (Number(bet.value) < 5)
+    bet.value = 5
+    
+  bStart.disabled = true
+  bPrepare.disabled = true
+  iApuesta.disabled = true
+  bet.disabled = true
+  apuesta = document.getElementById('apuesta').value
+  race()
+
+}
+
+// Comprobación y continuación de la carrera
+function race() {
+  
+  // Comprobación si ya se ha terminado la carrera
+  if (end) {
+    var msg
+    if (apuesta == end) {
+      msg = 'Congratulations: '+end
+      money.value = Number(money.value) + Number(bet.value)
+    }
+    else {
+      msg = 'Winner: ' +end
+      money.value = Number(money.value) - Number(bet.value)
+    }
+    alert(msg)
+    bPrepare.disabled = false   // Libera botón de reiniciar
+    bet.max = money.value       // Actualiza apuesta máxima
+    if (money.value < 5)
+      document.querySelector('#botones').innerHTML = 'Has perdido.'    
+  } else {
+    iteration()                             // Lanzamos nueva iteración
+    setTimeout(function() { race() }, 100)  // Encadenamos una nueva
+  }
+}
+
+// Cada iteración de la carrera (def: iteraciones de 100ms)
+// Actualizamos desplazamiento del navegador en attr "data-x"
+// De esta forma, sólo tenemos que actualizar en CSS/translateX
+function iteration() {
+
+  for (e in browsers) {
+    
+    if (blocked && e == 'ie')
+      continue
+    
+    var x = parseInt(browsers[e].getAttribute('data-x'))
+    var y = 0 + (-10 + Math.round(Math.random() * 20)) // y acumulado
+    
+    // get value of the bet
+    var bet = (betvalue[e][0].value);  
+    
+    // pass bet to the x value, keep random so it's not too static
+    browsers[e].setAttribute('data-x', x + bet/10 + random() )
+    browsers[e].setAttribute('data-y', y)
+    browsers[e].style.transform = 'translate(' + x + 'px, '+ Number(y) +'px)'
+    
+    if (parseInt(browsers[e].getAttribute('data-x')) > 740) {
+      end = e
+      break
+    }
+    
+    if (realistic && (e == 'ie')) {
+      n = Math.floor(Math.random() * 30)
+      if ((n == 7) && (!blocked)) {
+        errorSound.play()
+        blocked = true
+      }
+    }
+
+    console.log(betvalue[e][0].value);
+    
+  }  
+}
+
+// Resetea la carrera para volver a iniciarla
+function prepare_race() {
+  for (e in browsers) {
+    browsers[e].setAttribute('data-x', '0')
+    browsers[e].style.transform = ''
+  }
+  end = undefined
+  bStart.disabled = false
+  bet.disabled = false
+  iApuesta.disabled = false
+  blocked = false
+}
+
+function toggleRMode() {
+  r = document.getElementById('realistic').checked
+  if (r)
+    realistic = true
+  else
+    realistic = false  
+}
+
+
+
+
 
 // Click function to start Race
-$('#go').click(function(){
+// $('#go').click(function(){
   
-  //function check to see if race is complete
-  function checkIfComplete(){
-    if(isComplete == false){
-      isComplete = true;
-    } else{
-      place = 'Loser';
-    }
-  }
+//   //function check to see if race is complete
+//   function checkIfComplete(){
+//     if(isComplete == false){
+//       isComplete = true;
+//     } else{
+//       place = 'Loser';
+//     }
+//   }
   
-  //gets width of cars  
-  let carWidth = $('#car1').width();
-  //gets width of racetrack
-  let raceTrackWidth = $('#racetrack').width() - carWidth;
+//   //gets width of cars  
+//   let carWidth = $('#car1').width();
+//   //gets width of racetrack
+//   let raceTrackWidth = $('#racetrack').width() - carWidth;
   
-  //Generate rand Num
-  let raceTime1 = Math.floor(Math.random() * 5000 + 1);
-  let raceTime2 = Math.floor(Math.random() * 1000 + 1);
-  let raceTime3 = Math.floor(Math.random() * 2000 + 1);
-  let raceTime4 = Math.floor(Math.random() * 6000 + 1);
-  let raceTime5 = Math.floor(Math.random() * 9000 + 1);
-  let raceTime6 = Math.floor(Math.random() * 3000 + 1);
+//   //Generate rand Num
+//   let raceTime1 = Math.floor(Math.random() * 5000 + 1);
+//   let raceTime2 = Math.floor(Math.random() * 1000 + 1);
+//   let raceTime3 = Math.floor(Math.random() * 2000 + 1);
+//   let raceTime4 = Math.floor(Math.random() * 6000 + 1);
+//   let raceTime5 = Math.floor(Math.random() * 9000 + 1);
+//   let raceTime6 = Math.floor(Math.random() * 3000 + 1);
 
   
-  //flag var
-  let isComplete = false;
+//   //flag var
+//   let isComplete = false;
   
-  let place = 'Winner';
+//   let place = 'Winner';
 
   
   
-  //animate cars
-  $('#car1').animate({
-    left: raceTrackWidth
-  }, raceTime1, function(){
-    //animation complete
-    checkIfComplete();
+//   //animate cars
+//   $('#car1').animate({
+//     left: raceTrackWidth
+//   }, raceTime1, function(){
+//     //animation complete
+//     checkIfComplete();
     
-    $('#raceInfo1 span').text( place );
-  });
+//     $('#raceInfo1 span').text( place );
+//   });
   
-  $('#car2').animate({
-    left: raceTrackWidth
-  }, raceTime2, function(){
-    //animation complete
-    checkIfComplete();
+//   $('#car2').animate({
+//     left: raceTrackWidth
+//   }, raceTime2, function(){
+//     //animation complete
+//     checkIfComplete();
     
-    $('#raceInfo2 span').text( place );
-  });
+//     $('#raceInfo2 span').text( place );
+//   });
 
-  $('#car3').animate({
-    left: raceTrackWidth
-  }, raceTime3, function(){
-    //animation complete
-    checkIfComplete();
+//   $('#car3').animate({
+//     left: raceTrackWidth
+//   }, raceTime3, function(){
+//     //animation complete
+//     checkIfComplete();
     
-    $('#raceInfo3 span').text( place );
-  });
-    $('#car4').animate({
-    left: raceTrackWidth
-  }, raceTime4, function(){
-    //animation complete
-    checkIfComplete();
+//     $('#raceInfo3 span').text( place );
+//   });
+//     $('#car4').animate({
+//     left: raceTrackWidth
+//   }, raceTime4, function(){
+//     //animation complete
+//     checkIfComplete();
     
-    $('#raceInfo4 span').text( place );
-  });
-    $('#car5').animate({
-    left: raceTrackWidth
-  }, raceTime5, function(){
-    //animation complete
-    checkIfComplete();
+//     $('#raceInfo4 span').text( place );
+//   });
+//     $('#car5').animate({
+//     left: raceTrackWidth
+//   }, raceTime5, function(){
+//     //animation complete
+//     checkIfComplete();
     
-    $('#raceInfo5 span').text( place );
-  });
-    $('#car6').animate({
-    left: raceTrackWidth
-  }, raceTime6, function(){
-    //animation complete
-    checkIfComplete();
+//     $('#raceInfo5 span').text( place );
+//   });
+//     $('#car6').animate({
+//     left: raceTrackWidth
+//   }, raceTime6, function(){
+//     //animation complete
+//     checkIfComplete();
     
-    $('#raceInfo6 span').text( place );
-  });
-});
+//     $('#raceInfo6 span').text( place );
+//   });
+// });
 
 
-$('#reset').click(function(){
-  $('.car').css('left', '0');
-  $('.raceInfo span').text('');
-});
+// $('#reset').click(function(){
+//   $('.car').css('left', '0');
+//   $('.raceInfo span').text('');
+// });
 
 
 
