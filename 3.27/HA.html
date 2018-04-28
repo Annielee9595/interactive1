@@ -37,7 +37,8 @@ html, body {
   right: 0;
   left: 0;
   top: 0;
-  font-size: 20px;
+  font-size: 34px;
+
 }
 /*#header .center {
   background: rgba(0, 0, 0, 0.25);
@@ -61,12 +62,8 @@ html, body {
   font-family: "Lusitana";
   font-weight: normal;
   line-height: 1em;
-  font-size: 11em;
+  font-size: 32em;
   margin: 0;
-}
-/*#header .center .middle span {
-  line-height: 5em;
-  font-size: 1em;*/
 }
 
 #pageHr {
@@ -137,9 +134,13 @@ html, body {
 
 
 
-                                               /*First slide about net neutryality*/
 
- @use postcss-simple-vars;
+
+
+
+
+
+@use postcss-simple-vars;
 @use postcss-conditionals;
 @use postcss-each;
 @use postcss-for;
@@ -168,11 +169,11 @@ body {
 
 #container {
   display: inline-block;
-  margin-top: 8em;
+  margin-top: 6em;
   width: 100%;
-  max-width: 50%;
+  max-width: 70%;
   float: left;
-  margin-left: 24em;
+  margin-left: 8em;
 }
 
 #text {
@@ -262,10 +263,11 @@ body {
   }
 }
 
-#buttons {
+/*#buttons {
     display: none;
     margin-top: 500px;
-  }
+    color: black;
+  }*/
 
 
 
@@ -424,6 +426,10 @@ input#reset {
 
 
 
+
+h3{color:black;}
+
+
   </style>
 
 </head>
@@ -508,31 +514,12 @@ input#reset {
 <br/>
 <br/>
 <br/>
-<div id="page">
-<input type='button' value='Start!' id='go'>
-  <input type='button' value='Reset' id='reset'></div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
 
-<div id="page">
-<body id='race'>
+
+
+<div id="page" id='race'>
+<!-- <body id='race'> -->
   
   
   <div id="racetrack">
@@ -544,8 +531,14 @@ input#reset {
     <img src='a6.png' alt='blue car' id='car6' class='car'>
 
 
+
 <!--    <img src='http://i1278.photobucket.com/albums/y519/charliejaime10/online%20project%20pics/car_red_zpsuwfccbkl.png' alt='red car' id='car3' class='car'> -->
   </div>
+
+
+  <div id="page">
+<input type='button' value='Start!' id='go'>
+  <input type='button' value='Reset' id='reset'></div>
   <br/>
 <br/>
 <br/>
@@ -581,15 +574,22 @@ input#reset {
   </div>
 </div>
 <div id="page">
-<div id="buttons">
-    <h3>Do you want to know about this site? &nbsp;<input type="checkbox" name='yes' value='yes'>
-    <button id="print">print</button></h3>
+
+    <h3>Would you like to print the certification? &nbsp;
+      <!-- <input type="checkbox" name='yes' value='yes'> -->
+    <button onclick="myFunction()">Print </button>
   </div>
 </div>
-
 </div>
 
 
+
+
+
+<!-- 
+</div>
+
+ -->
 
 
 
@@ -756,6 +756,10 @@ $('#reset').click(function(){
 
 
 
+
+function myFunction() {
+    window.print();
+}
 
 
 
