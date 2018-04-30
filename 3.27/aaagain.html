@@ -126,6 +126,7 @@ html, body {
   padding: 10% 40px;
   text-align: center;
   font-size: 22px;
+  margin-top: 5px;
 }
 #page2 a {
   color: #fff;
@@ -261,6 +262,7 @@ body {
   #desktop, #tablet, #mobile {
     opacity: 0;
   }
+  img{ display: block; page-break-after: always }
 }
 
 /*#buttons {
@@ -321,8 +323,8 @@ body {
 
 #racetrack {
 /*  background: url("https://github.com/cjbeowulf/codepenimgs/blob/master/road_zpsho1ia8tt.JPG?raw=true") center left repeat-x;*/
-  height: 600px;
-  width: 1500px;
+  height: 670px;
+  width: 1400px;
   border-right: dashed 8px black;
  /* margin-right: 10px;*/
   box-sizing: border-box;
@@ -339,19 +341,25 @@ body {
 }
 
 #car2 {
-  top: 50px;
+  top: 30px;
 }
 #car3 {
-  top: 90px;
+  top: 50px;
 }
 #car4 {
-  top: 130px;
+  top: 70px;
 }
 #car5 {
-  top: 170px;
+  top: 90px;
 }
 #car6 {
-  top: 210px;
+  top: 110px;
+}
+#car7 {
+  top: 130px;
+}
+#car8 {
+  top: 150px;
 }
 
 #raceInfoContainer {
@@ -362,7 +370,7 @@ body {
   margin:auto;
   background-color: #333;
   align-self: center;
-  height: 380px;
+  height: 450px;
 
 }
 
@@ -432,7 +440,7 @@ h3{color:black;}
 
   </style>
 
-</head>
+</head> 
 <body>
 <div id="print">
   
@@ -476,22 +484,28 @@ h3{color:black;}
     
   
       <strong>Facebook</strong>: $ 
-      <input id="money" type="number" min="5" max="200" value="100" step="5">,000,000
+      <input  type="number" min="5" max="200" value="110" step="5">,000,000
       <br/>
       <strong>YouTube</strong>: $
-      <input id="bet" type="number" min="5" max="200" value="160" step="5">,000,000
+      <input  type="number" min="5" max="200" value="170" step="5">,000,000
       <br/>
        <strong>Netflix</strong>: $
-      <input id="bet" type="number" min="5" max="200" value="90" step="5">,000,000
+      <input  type="number" min="5" max="200" value="90" step="5">,000,000
       <br/>
        <strong>Google</strong>: $
-      <input id="bet" type="number" min="5" max="200" value="125" step="5">,000,000
+      <input  type="number" min="5" max="200" value="125" step="5">,000,000
       <br/>
        <strong>Twitter</strong>: $
-      <input id="bet" type="number" min="5" max="200" value="45" step="5">,000,000
+      <input  type="number" min="5" max="200" value="45" step="5">,000,000
       <br/>
        <strong>Chrome</strong>: $
-      <input id="bet" type="number" min="5" max="200" value="110" step="5">,000,000
+      <input  type="number" min="5" max="200" value="100" step="5">,000,000
+       <br/>
+      <strong>Small</strong>: $
+      <input  type="number" min="5" max="200" value="2" step="5">,000,000
+        <br/>
+      <strong>Small2</strong>: $
+      <input  type="number" min="5" max="200" value="3" step="5">,000,000
   
 
 </div>
@@ -523,12 +537,14 @@ h3{color:black;}
   
   
   <div id="racetrack">
-    <img src='a1.png' alt='black car' id='car1' class='car'>
-    <img src='a2.png' alt='blue car' id='car2' class='car'>
-    <img src='a3.png' alt='black car' id='car3' class='car'>
-    <img src='a4.png' alt='blue car' id='car4' class='car'>
-    <img src='a5.png' alt='black car' id='car5' class='car'>
-    <img src='a6.png' alt='blue car' id='car6' class='car'>
+    <img src='a1.png'  id='car1' class='car'>
+    <img src='a2.png'  id='car2' class='car'>
+    <img src='a3.png'  id='car3' class='car'>
+    <img src='a4.png'  id='car4' class='car'>
+    <img src='a5.png'  id='car5' class='car'>
+    <img src='a6.png'  id='car6' class='car'>
+    <img src='a7.png'  id='car7' class='car'>
+    <img src='a8.png'  id='car8' class='car'>
 
 
 
@@ -570,6 +586,8 @@ h3{color:black;}
     <div id='raceInfo4' class='raceInfo'>Google<span></span></div>
     <div id='raceInfo5' class='raceInfo'>Twitter<span></span></div>
     <div id='raceInfo6' class='raceInfo'>Chrome<span></span></div>
+    <div id='raceInfo7' class='raceInfo'>Small<span></span></div>
+    <div id='raceInfo8' class='raceInfo'>Small2<span></span></div>
 
   </div>
 </div>
@@ -675,15 +693,17 @@ $('#go').click(function(){
   //gets width of cars  
   let carWidth = $('#car1').width();
   //gets width of racetrack
-  let raceTrackWidth = $('#racetrack').width() - carWidth;
+  let raceTrackWidth = $('#racetrack').width() + carWidth;
   
   //Generate rand Num
-  let raceTime1 = Math.floor(Math.random() * 13000 + 1);
-  let raceTime2 = Math.floor(Math.random() * 3000 + 1);
-  let raceTime3 = Math.floor(Math.random() * 10000 + 1);
-  let raceTime4 = Math.floor(Math.random() * 8000 + 1);
-  let raceTime5 = Math.floor(Math.random() * 14000 + 1);
-  let raceTime6 = Math.floor(Math.random() * 11000 + 1);
+  let raceTime1 = Math.floor(Math.random() * 60000);
+  let raceTime2 = Math.floor(Math.random() * 2000 );
+  let raceTime3 = Math.floor(Math.random() * 200000);
+  let raceTime4 = Math.floor(Math.random() * 30000);
+  let raceTime5 = Math.floor(Math.random() * 200000);
+  let raceTime6 = Math.floor(Math.random() * 300000);
+  let raceTime7 = Math.floor(Math.random() * 500000 );
+  let raceTime8 = Math.floor(Math.random() * 600000);
 
   
   //flag var
@@ -744,8 +764,24 @@ $('#go').click(function(){
     
     $('#raceInfo6 span').text( place );
   });
-});
 
+   $('#car7').animate({
+    left: raceTrackWidth
+  }, raceTime7, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo7 span').text( place );
+  });
+   $('#car8').animate({
+    left: raceTrackWidth
+  }, raceTime8, function(){
+    //animation complete
+    checkIfComplete();
+    
+    $('#raceInfo8 span').text( place );
+  });
+});
 
 $('#reset').click(function(){
   $('.car').css('left', '0');
