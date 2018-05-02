@@ -165,31 +165,33 @@ body {
 }
 
 #container {
-  display: inline-block;
+  /*display: inline-block;*/
   margin-top: 6em;
   width: 100%;
   max-width: 70%;
   float: left;
   margin-left: 8em;
+  line-height: 1.6em;
 }
 
 #text {
   display: inline-block;
-  margin: .8em 0;
+  /*margin: .8em 0;*/
 }
 
 .cursor {
   display: inline-block;
-  height: 1.2em;
+  height: .7em;
   width: .5em;
   background: white; 
-  margin-top: .3em;
+  /*margin-top: .3em;*/
   margin-left: -.5em;
   
 }
 
 .prompt {
   color: var(white);
+
 }
 
 .hide {
@@ -299,9 +301,12 @@ body {
 
 
 #panel input[type="number"] {
-  width:42px;
-  border:1px solid #CCC;
+  width:60px;
+  border:none;
   padding:3px;
+  font-size: 20px;
+  text-align: right;
+  font-family: 'Source Code Pro', 'Inconsolata', monospace;
 }
 
 
@@ -426,7 +431,9 @@ input#reset {
   clear: both;
 }
 
+#text{
 
+}
 
 
 
@@ -497,11 +504,11 @@ h3{color:black;}
        <strong>Chrome</strong>: $
       <input id="bet" class="c" type="number" min="5" max="200" value="100" step="5">,000,000
        <br/>
-      <strong>Small</strong>: $
-      <input id="bet" class="s" type="number" min="5" max="200" value="20" step="5">,000,000
+      <strong>Anonymous</strong>: $
+      <input id="bet" class="s" type="number" min="5" max="200" value="20" step="5">,000
         <br/>
-      <strong>Small2</strong>: $
-      <input id="bet" class="ss" type="number" min="5" max="200" value="30" step="5">,000,000
+      <strong>Unknown</strong>: $
+      <input id="bet" class="ss" type="number" min="5" max="200" value="30" step="5">,000
   
 
 </div>
@@ -628,7 +635,7 @@ $(document).scroll(function() {
 
 // Change this to increase or slow typing speed
 // The console will type each letter at a random interval between 0ms and `speed` ms.
-let speed = 150;
+let speed = 100;
 let cursorSpeed = 400;
 let time = 0;
 let prevTime = 0;
